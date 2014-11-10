@@ -1,0 +1,12 @@
+notes.html
+
+if a variable returns a string in console like so:   
+var ceiling = prompt("pick a num");
+ceiling = "7" // or whatever you picked
+
+to convert it to number:
+parseInt(ceiling);
+
+Number(ceiling); // i prefer this.  will return NaN if it can't.  Then you can test against it w/ isNaN(ceiling) == true
+
++ceiling +5  //will convert ceiling to a number if it can
