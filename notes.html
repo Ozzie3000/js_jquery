@@ -3,10 +3,25 @@ notes.html
 if a variable returns a string in console like so:   
 var ceiling = prompt("pick a num");
 ceiling = "7" // or whatever you picked
-
 to convert it to number:
 parseInt(ceiling);
-
 Number(ceiling); // i prefer this.  will return NaN if it can't.  Then you can test against it w/ isNaN(ceiling) == true
-
 +ceiling +5  //will convert ceiling to a number if it can
+
+math operation shortcuts
+a +=  
+a -=
+a *=
+a /=
+a++
+a--
+
+for strings; var name = "franklin"; var message = "hello"
+message = message + " " + name              same as 
+message += " "+ name;
+
+arrays
+array_b =[];  // empty array
+array_b[array_b-1] // quick way to access last index
+array_b[array_b.length] = "something";  // easy way to add something to the end
+array_b.push("stuff", "like", "this");  //add stuff to the end
