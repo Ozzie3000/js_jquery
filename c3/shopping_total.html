@@ -14,24 +14,53 @@
 	<br /><br />
   <h1>shopping total</h1>
 
- <p> Let's go shopping. I can calculate your total price.  Just give me TAX, quantity, and price</p>
+ <p> Let's go shopping. I can calculate your total price.  Just give me quantity, price, and TAX. <br />For tax drop off the % symbol</p>
 
  <div>
- 	<input type="button" id="start" class="btn" onclick="shopping():" /> 
+ 	Quantity: <input type="text" id="quant" placeholder="Enter quantity here" title="How many items?"/><br />
+ 	Price: <input type="text" id="price_per" placeholder="Enter price per item" title="Price per item?" /><br />
+ 	Tax: <input type="text" id="tax_rate" placeholder="whole number" title="I'll take care of decimals."/>%<br /><br />
+ 	<input type="button" id="start" class="btn" value="Ready?" />
+ 	<br /><br />
+ 	<textarea id="tots" placeholder="Wait for it"></textarea>
  </div>
- 
+
+ <div></div>
+
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
-	function shopping(quantiy, price, TAX){
-		//
-		var preTotal = quantiy * price * (1+ TAX);
-		var totalPrice = preTotal.toFixed(2);
-		return value;
-	}
 </script>
 <script>
 	$(document).ready(function(){
 		$("h1").hide().slideDown(1000);
+		
+
+		$("#start").on("click", function(){
+			quantity = $("#quant").val();
+			x = $("#quant").val();
+			//$("#tots").text(quantity);
+			//alert(quantity);
+			//price = $("#price_per").val();
+			y = $("#price_per").val();
+			//alert(price);
+			//TAX = $("#tax_rate").val();
+			z = $("#tax_rate").val();
+			//alert(TAX);
+	
+			function shopping(quantity, price, TAX){
+				//
+				var preTotal = x * y * ((0.01 * z)+1);
+				var totalPrice = preTotal.toFixed(2);
+				//return totalPrice;
+				//alert(totalPrice);
+				$("#tots").text(totalPrice);
+			}
+			//setTimeout(function(){ shopping();}, 100);
+			shopping();
+		});
+
+	
+
 	});
 </script>
 </body>
