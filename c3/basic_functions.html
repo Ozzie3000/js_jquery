@@ -14,16 +14,28 @@
 	<br /><br />
   <h1>basic functions</h1>
 
-<div>
-	<script type="text/javascript">tagger("Well Hello there!", "p");</script>
-</div>
+	<div>
+	<!--	<script type="text/javascript">setTimeout(function(){tagger1("Well Hello there!", "p");}, 2000);</script>  -->
+	</div>
+
+  <p id="here1"></p>
+  <p id="here2"></p>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
-	function tagger(message, tag){
+	function tagger1(message, tag){
 		document.write("<"+tag+">" +message+ "</"+tag+">");
 	}
+
+	function tagger2(message, tag){
+		var message = prompt("Give me a sentence");
+		var tag = prompt("Pick from the following: \nh1, h2, h3, p, aside, footer")
+		var func1 = "<"+tag+">" +message+ "</"+tag+">";
+		document.getElementById("here1").innerHTML = func1;
+	}
+
+	setTimeout(function(){ tagger2();}, 1500);
 </script>
 <script>
 	$(document).ready(function(){
