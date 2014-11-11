@@ -51,12 +51,16 @@
 				//
 				var preTotal = x * y * ((0.01 * z)+1);
 				var totalPrice = preTotal.toFixed(2);
-				//return totalPrice;
+				return totalPrice;
 				//alert(totalPrice);
-				$("#tots").text(totalPrice);
+				//$("#tots").text(totalPrice);  //opt1
+				//our we can blank out line above opt2
 			}
-			//setTimeout(function(){ shopping();}, 100);
-			shopping();
+			//setTimeout(function(){ shopping();}, 100);  //opt3
+			//shopping();  //opt1
+			$("#tots").text(shopping());  //opt2
+
+
 		});
 
 	
