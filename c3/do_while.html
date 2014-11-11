@@ -14,10 +14,27 @@
 	<br /><br />
   <h1>do while loop</h1>
 
-
+	<p id="here1"></p>
+  <p id="here2"></p>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script type="text/javascript">
+	function luckyNum(){
+		do{
+			var luckyNumber = prompt("What is the best lucky Number?. \nPlease only use numeric values.", "");
+			this.luckyNumber = parseInt(luckyNumber);
+		}while ((isNaN(luckyNumber) || (luckyNumber == "") || (luckyNumber == null)));
+		
+		if(luckyNumber==7){
+			document.getElementById("here1").innerHTML = "7 is a perfect Number.";
+		}else{
+			document.getElementById("here2").innerHTML = "Interesting that you would pick " +luckyNumber+ " as your lucky Number";
+		}
+	}
+
+ setTimeout(function(){luckyNum();}, 2500);
+</script>
 <script>
 	$(document).ready(function(){
 		$("h1").hide().slideDown(1000);
