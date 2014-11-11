@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>JS and jQuery | </title>
+<title>JS and jQuery | Date function</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <script type="text/javascript">
@@ -12,7 +12,7 @@
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
-  <h1></h1>
+  <h1>Date function</h1>
 
   <p id="here1"></p>
   <p id="here2"></p>
@@ -20,7 +20,13 @@
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
+	function showDate(){
+		var today = new Date();
+		document.getElementById("here1").innerHTML = today;
+		document.getElementById("here2").innerHTML = "use this method to make it readable: varName.toDate(); <br /> " +today.toDateString();
+	}
 
+	setTimeout(function(){ showDate();}, 1700);
 </script>
 <script>
 	$(document).ready(function(){
