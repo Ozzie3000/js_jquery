@@ -16,10 +16,13 @@
 
  <p> Let's go shopping. I can calculate your total price.  Just give me TAX, quantity, and price</p>
 
-
+ <div>
+ 	<input type="button" id="start" class="btn" onclick="shopping():" /> 
+ </div>
+ 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
-	function shopping(quantiy, price){
+	function shopping(quantiy, price, TAX){
 		//
 		var preTotal = quantiy * price * (1+ TAX);
 		var totalPrice = preTotal.toFixed(2);
