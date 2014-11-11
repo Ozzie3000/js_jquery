@@ -5,8 +5,9 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <script type="text/javascript">
+
 </script>
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css"></style>
 </head>
 <body>
@@ -14,10 +15,17 @@
 	<br /><br />
   <h1>Conditional</h1>
 
-
+  <p id="here"></p>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script type="text/javascript">
+	var luckyNumber = prompt("What is the best lucky Number?", "");
+
+	if(luckyNumber==7){
+		document.getElementById("here").innerHTML = "7 is a perfect Number."
+	}
+</script>
 <script>
 	$(document).ready(function(){
 		$("h1").hide().slideDown(1000);
