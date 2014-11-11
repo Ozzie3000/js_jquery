@@ -14,13 +14,15 @@
 	<br /><br />
   <h1>shopping total</h1>
 
-
+ <p> Let's go shopping. I can calculate your total price.  Just give me TAX, quantity, and price</p>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	function shopping(quantiy, price){
 		//
+		var preTotal = quantiy * price * (1+ TAX);
+		var totalPrice = preTotal.toFixed(2);
 		return value;
 	}
 </script>
