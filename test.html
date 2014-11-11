@@ -7,7 +7,9 @@
 <script type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	body{background: url("");}
+</style>
 </head>
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
@@ -19,10 +21,12 @@
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
-	 var ceiling = prompt("Pick the highest possible number it could be");
+	// var ceiling = prompt("Pick the highest possible number it could be");
 		// this.ceiling = Number(ceiling);
 
-		
+		b_g = prompt("choose a background color", "");
+		document.body.style.backgroundColor=b_g;
+
 	$(document).ready(function(){
 		$("h1").delay(5000).hide().slideDown(3000);
 
