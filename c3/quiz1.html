@@ -14,7 +14,11 @@
 	<br /><br />
   <h1>Quiz time.</h1>
 
-
+  <div>Number of correct answers: 
+  	<p id="here1"></p>
+  	Out of: 
+  	<p id="here2"></p>
+  </div>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -29,7 +33,14 @@
 
 	function askQuestion(question){
 		var answer = prompt(question[0],"");
+		if(answer == question[1]){
+			alert("Correct!");
+			score++;
+		}else{
+			alert("Better luck next time. The answer is " +question[1]);
+		}
 	}
+
 	for(var i=0; i<questions.length; i++){
 		askQuestion(questions[i]);
 	};
