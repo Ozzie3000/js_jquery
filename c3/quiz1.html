@@ -27,14 +27,15 @@
 	var questions = [
 		["How many moons does Earth have?", 1],
 		["How many moons does Saturn have?", 31],
-		["How many moons does Venus have?", 0]
+		["How many moons does Venus have?", 0],
+		["How many moons does Uranus have?", 27]
 
 	];
 
 	function askQuestion(question){
 		var answer = prompt(question[0],"");
 		if(answer == question[1]){
-			alert("Correct!");
+			alert("correct!");
 			score++;
 		}else{
 			alert("Better luck next time. The answer is " +question[1]);
@@ -45,14 +46,18 @@
 		askQuestion(questions[i]);
 	};
 	
+	/*
+	var message = "You got "+score;
+	message += " out of " +questions.length;
+	message += " questions correct.";
+	*/
+
+	document.getElementById("here1").innerHTML = +score;
+	document.getElementById("here2").innerHTML = questions.length;
 </script>
 <script>
 	$(document).ready(function(){
 		$("h1").hide().fadeIn(1000);
-
-
-
-
 	});
 </script>
 </body>
