@@ -56,6 +56,10 @@
   <p>Second p tag</p>
   <p>Third p tag</p>
 
+  <ol>
+  	<li>Normal font size</li>
+  	<li><a href="#">bigger font. a tag within li tag</a></li>
+  </ol>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -73,7 +77,7 @@
 		$("p:not(:first, :last)").hide(2000).delay(1000).show(2000).css("color","green");
 		
 		//has() filter
-		$("li:has(a)").css("font-size","200");  //different than selector. selects parent if it has an a tag as child
+		$("li:has(a)").css("font-size","150%");  //different than selector. selects parent if it has an a tag as child
 
 		//contains() filter
 
