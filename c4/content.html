@@ -34,6 +34,7 @@
 		$("h1").hide().slideDown(1000);
 
 		//html() and text() only capture the first element in the collection if there are multiple
+		//however if you are replacing; all will be changed
 		$("#btn_1").on("click", function(){
 			var show_me = $(this).parent().html();
 			alert(show_me);
