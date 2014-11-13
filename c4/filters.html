@@ -61,6 +61,10 @@
   	<li>stuff <a href="#">bigger font. a tag within li tag</a></li>
   </ol>
 
+  <a href="#">Click me!</a>
+  <a href="#">dont Click me!</a>
+  <a href="#">Test</a>
+
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
@@ -81,7 +85,8 @@
 		$("li:has(a)").hide(2000).delay(1000).show(2000); //supposedly only selects parents, but you can see it selects both
 
 		//contains() filter
-
+		$("a:contains(Click me!").hide(2000).delay(1000).show(2000);
+			
 		//hidden() filter
 
 
