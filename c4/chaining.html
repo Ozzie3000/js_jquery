@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS and jQuery | chaining</title>
+<meta charset="utf-8">
+<meta name="description" content="HTML5 demos" />
+<script type="text/javascript">
+</script>
+<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
+	<br /><br />
+  <h1>chaining</h1>
+
+  <p></p>
+
+  <div id="popup"></div>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script>
+	$(document).ready(function(){
+		$("h1").hide().slideDown(1000);
+
+		$("#popup").width(300).height(300).text("Hello World").css("color","teal").css("font-size","150%");
+
+		$("#popup").delay(3000)
+			.fadeOut(2000)
+			.delay(2000)
+			.fadeIn(2000);
+
+	});
+</script>
+</body>
+</html>
