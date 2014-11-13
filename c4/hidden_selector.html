@@ -9,10 +9,10 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css">
 	#p_1{}
-	#p_2{}
+	#p_2{ display: none;}
 	#p_3{}
-	#p_4{}
-	#p_5{}
+	#p_4{ }
+	#p_5{width: 0px; height: 0px;}
 </style>
 </head>
 <body>
@@ -29,19 +29,19 @@
 
 <br />
 
-  <p id="p_1">P tag. normal</p>
-  <p id="p_2">P tag</p>
-  <p id="p_3">P tag</p>
-  <p id="p_4">P tag</p>
-  <p id="p_5">P tag</p>
+  <p id="p_1">P tag.#p_1 normal</p>
+  <p id="p_2">P tag. #p_2 css display none</p>
+  <p id="p_3">P tag. #p_3 jquery hidden()</p>
+  <p id="p_4">P tag. #p_5 jquery css display none</p>
+	<p id="p_5">P tag. #p_4 width 0 height 0</p>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
-		$("h1").hide().slideDown(1000);
+	//	$("h1").hide().slideDown(1000);
 
-
+	$("#p_3").hide();
 
 
 	});
