@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS and jQuery | prepend, append</title>
+<meta charset="utf-8">
+<meta name="description" content="HTML5 demos" />
+<script type="text/javascript">
+</script>
+<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
+	<br /><br />
+  <h1>.prepend() and .append()</h1>
+
+  <ol>Grocery List
+  	<li>apples</li>
+  	<li>blueberries</li>
+  	<li>cantalop</li>
+  	<li>dates</li>
+  	<li>eggplant</li>
+  </ol>
+
+<br />
+	<input type="text" id="beginning_add" value="add to top of the list" onblur="if(this.value=='')this.value='add to top of the list';" onfocus="if(this.value=='add to top of the list')this.value='';" /><br />
+	<input type="text" id="end_add" value="add to bottom of the list" onblur="if(this.value=='')this.value='add to bottom of the list';" onfocus="if(this.value=='add to bottom of the list')this.value='';"/>
+
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script>
+	$(document).ready(function(){
+		//$("h1").hide().slideDown(1000);
+
+
+
+
+	});
+</script>
+</body>
+</html>
