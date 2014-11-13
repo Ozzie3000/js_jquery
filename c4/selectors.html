@@ -24,6 +24,10 @@
   	<li>list item 4 </li>
   </ul>
 
+  <div>a div
+  	<p id="3">A p tag within a div</p>
+  </div>
+
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	//js selectors
@@ -38,7 +42,10 @@
 		$("h1").hide().slideDown(1000);
 
 		//descendant selectors
-		$("#navbar a")
+		descendant_selectors_1 = $("#navbar a");  //2 anchors under parent navbar
+
+		//child selectors. parent > child
+		ptags_under_body = $("body > p");  //doesn't capture p tag under div
 
 
 	});
