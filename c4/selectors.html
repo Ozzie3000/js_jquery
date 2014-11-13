@@ -29,7 +29,7 @@
   </div>
 
   <img src="http://meowaboutcosplay.com/guides_tutorials/link/e_link2.jpg">
- 
+	<a id="page_link">anchor w/o href. Does not blink</a>
   <img alt="Picture of link" src="http://zeldawiki.org/images/6/64/Adult_Link_OoT_3D.png"  />
 
 
@@ -58,6 +58,8 @@
 		//Attribute selectors
 		images_withAlt = $("img[alt]");
 		images_withAlt.fadeOut(2000).delay(1000).fadeIn(2000).delay(1000).hide(2000).delay(1000).slideDown(2000);
+			//another use
+			$("a[href]").fadeOut(2000).delay(1000).fadeIn(2000);
 
 	});
 </script>
