@@ -70,6 +70,7 @@
 		//delay does not work here css effect acts immediately
 		$("p:first").hide(2000).delay(1000).show(2000).css("color","blue");
 		$("p:last").hide(2000).delay(1000).show(2000).css("color","red");
+		$("p:not(:first, :last)").hide(2000).delay(1000).show(2000).css("color","green");
 
 	});
 </script>
