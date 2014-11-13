@@ -52,6 +52,10 @@
   	</tr>
   </table>
 
+  <p>First p tag</p>
+  <p>Second p tag</p>
+  <p>Third p tag</p>
+
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -63,7 +67,9 @@
 
 		$("tr:odd").delay(6000).hide(2000).delay(1000).show(2000);
 
-
+		//delay does not work here css effect acts immediately
+		$("p:first").hide(2000).delay(1000).show(2000).css("color","blue");
+		$("p:last").hide(2000).delay(1000).show(2000).css("color","red");
 
 	});
 </script>
