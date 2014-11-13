@@ -15,15 +15,15 @@
   <h1>content</h1>
 
 	<div class="container">
-	  <p id="p_1">p tag. paragraph 1 </p><button class="btn illu" id="btn_1">show html code</button>
+	  <p id="p_1">p tag. paragraph 1 </p><button class="btn illu" id="btn_1">show parent html code</button>
 	  <p id="p_2">p tag. paragraph 2 </p><button class="btn illu" id="btn_2">change html code for p 2</button>
-	  <p id="p_3">p tag. paragraph 3 </p><button class="btn illu" id="btn_3"> </button>
+	  <p id="p_3">p tag. paragraph 3 </p><button class="btn illu" id="btn_3">use text func </button>
 	</div>
 
   <br /><br />
-  <div id="here1"></div>
+  <div id="here1">Results here</div>
   
-  <button class="btn" id="btn_1"></button>
+<!--  <button class="btn" id="btn_1"></button>  -->
 
 
 
@@ -40,7 +40,17 @@
 			$("#here1").html(show_me);
 		});
 
+		$("#btn_2").on("click", function(){
+			var show_me = $(this).prev().clone().html("Well Hello There");
+			$("#here1").html(show_me);
+			$(this).prev().html("Well Hello There");
+		});
 
+		$("#btn_3").on("click", function(){
+			var show_me = $(this).parent().text();
+			alert(show_me);
+			$("#here1").text(show_me);
+		});
 
 
 	});
