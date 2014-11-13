@@ -12,7 +12,7 @@
 	#p_2{ display: none;}
 	#p_3{}
 	#p_4{ }
-	#p_5{width: 0px; height: 0px;}
+	#p5{width: 0px; height: 0px;}
 </style>
 </head>
 <body>
@@ -42,12 +42,16 @@
   <p id="p_2">P tag. #p_2 css display none</p>
   <p id="p_3">P tag. #p_3 jquery hidden()</p>
   <p id="p_4">P tag. #p_4 jquery css display none</p>
-	<p id="p_5">P tag. #p_5 width 0 height 0</p>
+	<div id="p_5"><p id="p_5">P...tag...#p_5...h:0...w:0...</p></div>
 
 	<br />
 	<div style="margin-top:120px; color:blue;">AFTER: Look below</div>
 	<p style="color:red;">CLONE using $("p:hidden").clone().show();</p>
 	<div id="here1"></div>
+	
+	<br/><br/>
+
+	<div id="here2"></div>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -58,7 +62,8 @@
 
 	$("#p_4").css("display", "none");
 
-	$("#here1").html($("p:hidden").clone().show());
+
+	$("#here1").html($("p:hidden").clone().show());  //can't get the 0 x 0 to work
 
 
 	});
