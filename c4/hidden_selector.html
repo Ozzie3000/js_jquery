@@ -27,14 +27,27 @@
   	<li>hidden form fields</li>
   </ol>
 
-<br />
+  <br />
+  <p>BEFORE</p>
+  <p>P tag.#p_1 normal</p>
+  <p>P tag. #p_2 css display none</p>
+  <p>P tag. #p_3 jquery hidden()</p>
+  <p>P tag. #p_4 jquery css display none</p>
+	<p>P tag. #p_5 width 0 height 0</p>
 
+	<br />
+
+	<p>elements effect by rules</p>
   <p id="p_1">P tag.#p_1 normal</p>
   <p id="p_2">P tag. #p_2 css display none</p>
   <p id="p_3">P tag. #p_3 jquery hidden()</p>
-  <p id="p_4">P tag. #p_5 jquery css display none</p>
-	<p id="p_5">P tag. #p_4 width 0 height 0</p>
+  <p id="p_4">P tag. #p_4 jquery css display none</p>
+	<p id="p_5">P tag. #p_5 width 0 height 0</p>
 
+	<br />
+	<div style="margin-top:120px; color:blue;">AFTER: Look below</div>
+	<p style="color:red;">CLONE using $("p:hidden").clone().show();</p>
+	<div id="here1"></div>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -42,6 +55,10 @@
 	//	$("h1").hide().slideDown(1000);
 
 	$("#p_3").hide();
+
+	$("#p_4").css("display", "none");
+
+	$("#here1").html($("p:hidden").clone().show());
 
 
 	});
