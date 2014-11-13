@@ -14,8 +14,8 @@
 	<br /><br />
   <h1 id="header1">selectors</h1>
 
-  <p>a p tag by itself. <strong>strong.</strong> Not strong.</p>
-
+  <p id="p_1">a p tag by itself. <strong>strong.</strong> Not strong.</p>
+  <p id="p_2">version 1 pre js.</p>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
@@ -23,6 +23,8 @@
 	h1 = document.getElementById("header1");
 	class_name1 = document.getElementsByClassName('home');
 	tag_name1 = document.getElementsByTagName('p');
+	document.getElementById("p_2").innerHTML = "version 2; post js.";
+
 </script>
 <script>
 	$(document).ready(function(){
