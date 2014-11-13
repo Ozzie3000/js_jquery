@@ -28,6 +28,11 @@
   	<p id="3">A p tag within a div</p>
   </div>
 
+  <img src="http://meowaboutcosplay.com/guides_tutorials/link/e_link2.jpg">
+ 
+  <img alt="Picture of link" src="http://zeldawiki.org/images/6/64/Adult_Link_OoT_3D.png"  />
+
+
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	//js selectors
@@ -50,6 +55,9 @@
 		//Adjacent sibling
 		adjacent_tags = $("p + ul");  //first is neighbor. 2nd is what you want to actually grab
 
+		//Attribute selectors
+		images_withAlt = $("img[alt]");
+		images_withAlt.fadeOut(2000).delay(1000).fadeIn(2000).delay(1000).hide(2000).delay(1000).slideDown(2000);
 
 	});
 </script>
