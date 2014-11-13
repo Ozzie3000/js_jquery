@@ -71,8 +71,9 @@
 		$("p:first").hide(2000).delay(1000).show(2000).css("color","blue");
 		$("p:last").hide(2000).delay(1000).show(2000).css("color","red");
 		$("p:not(:first, :last)").hide(2000).delay(1000).show(2000).css("color","green");
+		
 		//has() filter
-
+		$("li:has(a)").css("font-size","200");  //different than selector. selects parent if it has an a tag as child
 
 		//contains() filter
 
