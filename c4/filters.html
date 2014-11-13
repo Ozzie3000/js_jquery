@@ -58,7 +58,7 @@
 
   <ol>
   	<li>Normal font size</li>
-  	<li><a href="#">bigger font. a tag within li tag</a></li>
+  	<li>stuff <a href="#">bigger font. a tag within li tag</a></li>
   </ol>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -78,6 +78,7 @@
 		
 		//has() filter
 		$("li:has(a)").css("font-size","150%");  //different than selector. selects parent if it has an a tag as child
+		$("li:has(a)").hide(2000).delay(1000).show(2000); //supposedly only selects parents, but you can see it selects both
 
 		//contains() filter
 
