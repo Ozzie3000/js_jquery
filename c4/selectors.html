@@ -17,6 +17,13 @@
   <p id="p_1">a p tag by itself. <strong>strong.</strong> Not strong.</p>
   <p id="p_2">version 1 pre js.</p>
 
+  <ul id="navbar">
+  	<li>list item 1</li>
+  	<li>list item 2 <a href="#">anchor 1</a></li>
+  	<li>list item 3 <a href="#">anchor 2</a></li>
+  	<li>list item 4 </li>
+  </ul>
+
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	//js selectors
@@ -30,7 +37,8 @@
 	$(document).ready(function(){
 		$("h1").hide().slideDown(1000);
 
-
+		//descendant selectors
+		$("#navbar a")
 
 
 	});
