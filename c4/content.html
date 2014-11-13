@@ -14,19 +14,31 @@
 	<br /><br />
   <h1>content</h1>
 
-  <p id="p_1">p tag. paragraph 1</p>
-  <p id="p_2">p tag. paragraph 2</p>
-  <p id="p_3">p tag. paragraph 3</p>
+	<div class="container">
+	  <p id="p_1">p tag. paragraph 1 </p><button class="btn illu" id="btn_1">show html code</button>
+	  <p id="p_2">p tag. paragraph 2 </p><button class="btn illu" id="btn_2">change html code for p 2</button>
+	  <p id="p_3">p tag. paragraph 3 </p><button class="btn illu" id="btn_3"> </button>
+	</div>
 
+  <br /><br />
+  <div id="here1"></div>
+  
   <button class="btn" id="btn_1"></button>
-  <button class="btn" id="btn_1"></button>
-  <button class="btn" id="btn_1"></button>
+
+
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
 		$("h1").hide().slideDown(1000);
+
+		//html() and text() only capture the first element in the collection if there are multiple
+		$("#btn_1").on("click", function(){
+			var show_me = $(this).parent().html();
+			alert(show_me);
+			$("#here1").html(show_me);
+		});
 
 
 
