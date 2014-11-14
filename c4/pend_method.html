@@ -43,7 +43,8 @@
 		}else{
 			$("ol").prepend("<li>"+first_item+"</li>");
 			$("h2").text("").hide();
-		}
+			$("#beginning_add").val("");
+		};
 	});
 
 	$("#sub_button2").on("click", function(){
@@ -54,7 +55,8 @@
 		}else{
 			$("ol").append("<li>"+second_item+"</li>");
 			$("h2").text("").hide();
-		}
+			$("#end_add").val("");
+		};
 	});
 
 
