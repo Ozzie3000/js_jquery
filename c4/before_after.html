@@ -7,7 +7,9 @@
 <script type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#warning{ color: red;}
+</style>
 </head>
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
@@ -17,7 +19,7 @@
   <div id="div_a">
   	<input type="text" id="in_1" class="receiver" placeholder="Username" tabindex="1" /><button id="sub_button1" class="submitter" />Enter</button><br />
   </div>
-  
+
   <div id="div_b">
   	<input type="text" id="in_2" class="receiver" placeholder="favorite color" tabindex="2" /><button id="sub_button1" class="submitter" />Enter</button><br />
   </div>
@@ -30,9 +32,12 @@
 		//$("h1").hide().slideDown(1000);
 
 		$(".submitter").on("click", function(){
-			answer = $(this).prev().val;
-			if (answer == ""){
-				$("")
+			resp = $(this).prev().val();
+			if (resp == ""){
+				$(this).parent().before("<p id='warning'>Please fill in the box below</p>");
+			}else{
+				alert("got it. thanks");
+				$(this).parent().remove("p");
 			}
 		});
 
