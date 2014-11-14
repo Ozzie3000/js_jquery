@@ -59,20 +59,6 @@
 
 
 
-	function submitter(e){
-		switch (e.keyCode){
-			case 9: /*tab key */
-				first_item = $("#beginning_add").val();
-				if ((first_item == "add to top of the list") ||(first_item == "")){
-					$("h2").show().text("Please enter something at least....");
-					$("#beginning_add").val("add to top of the list");
-				}else{
-					$("ol").prepend("<li>"+first_item+"</li>");
-					$("h2").text("").hide();
-				}
-			break;
-		} //end of switch
-	} //end of function submitter
 
 
 	});
