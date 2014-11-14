@@ -14,7 +14,14 @@
 	<br /><br />
   <h1>.before() and .after()</h1>
 
-  <input type="text" id="in_1" class="receiver" placeholder="Username" />
+  <div id="div_a">
+  	<input type="text" id="in_1" class="receiver" placeholder="Username" tabindex="1" /><button id="sub_button1" class="submitter" />Enter</button><br />
+  </div>
+  
+  <div id="div_b">
+  	<input type="text" id="in_2" class="receiver" placeholder="favorite color" tabindex="2" /><button id="sub_button1" class="submitter" />Enter</button><br />
+  </div>
+
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -22,7 +29,12 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$(".submitter").on("click", function(){
+			answer = $(this).prev().val;
+			if (answer == ""){
+				$("")
+			}
+		});
 
 
 	});
