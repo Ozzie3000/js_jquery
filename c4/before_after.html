@@ -24,7 +24,7 @@
   	<input type="text" id="in_2" class="receiver" placeholder="favorite color" tabindex="2" /><button id="sub_button1" class="submitter" />Enter</button><br />
   </div>
 
-
+  <p>test</p>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -37,7 +37,7 @@
 				$(this).parent().before("<p id='warning'>Please fill in the box below</p>");
 			}else{
 				alert("got it. thanks");
-				$(this).parent().remove("p");
+				$(this).parent().parent().find("#warning").remove();
 			}
 		});
 
