@@ -7,7 +7,9 @@
 <script type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	.error{ color: red;}
+</style>
 </head>
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
@@ -23,12 +25,16 @@
   <span class="error">Error</span>
   <p>Lorem ipsum dolor sit amet, nam ex fuisset atomorum.</p>
 
+  <button class="btn" id="remover">Remove errors</button>
+
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$("#remover").on("click", function(){
+			$("span").remove();
+		});
 
 
 	});
