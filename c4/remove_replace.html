@@ -30,6 +30,10 @@
   <br /><br /><br />
 
   <img src="http://pngimg.com/upload/tree_PNG212.png" alt="tree">
+  <img src="http://pngimg.com/upload/tree_PNG212.png" alt="tree">
+  <img src="http://pngimg.com/upload/tree_PNG212.png" alt="tree">
+  <br /><br />
+  <span id="cart"></span>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -37,10 +41,16 @@
 		//$("h1").hide().slideDown(1000);
 
 		$("#remover").on("click", function(){
-			$("span").remove();
+			$(".error").remove();
 		});
 
-
+		counter = 0
+		
+		$("img").on("click", function(){
+			$(this).replaceWith("added to cart");
+			counter++;
+			$("#cart").text(counter);
+		});
 	});
 </script>
 </body>
