@@ -39,6 +39,9 @@
 				alert("got it. thanks");
 				$(this).parent().parent().find("#warning").remove();
 			}
+			if (resp != ""){
+				$(this).parent().after("<button>Box above is complete</button>");
+			}
 		});
 
 
