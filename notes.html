@@ -91,16 +91,19 @@ if(!valid){
 	.remove() deletes
 	 compared to .hide() hides it but it is still accessible
 
-	 .replaceWith()   
-	 for i.e. $("whatever").replaceWith(<p>Hello world</p>);
+ .replaceWith()   
+ for i.e. $("whatever").replaceWith(<p>Hello world</p>);
 
-	 .add() and .remove() together example
-	 		$("p").on("click", function(){
-			$(this).filter(function(){
-				if($(this).hasClass("highlight")){
-					$(this).removeClass("highlight");
-				}else{
-					$(this).addClass("highlight");
-				}
-			});
+ .add() and .remove() together example
+ 		$("p").on("click", function(){
+		$(this).filter(function(){
+			if($(this).hasClass("highlight")){
+				$(this).removeClass("highlight");
+			}else{
+				$(this).addClass("highlight");
+			}
 		});
+	});
+
+	// .css("")  will find value
+	$("element").css("background-color")  will find bg color of selected element
