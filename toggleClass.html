@@ -14,7 +14,15 @@
 	<br /><br />
   <h1>toogle class</h1>
 
+  <p>p tag 1</p>
+  <p>p tag 2</p>
+  <p>p tag 3</p>
+  <p>p tag 4</p>
+  <p>p tag 5</p>
 
+  <span>1) Won't work on me</span>
+  <span>2) Won't work on me</span>
+  <span>3) Won't work on me</span>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -34,6 +42,9 @@
 
 	//or a shorter version is with toggleClass
 
+	$("span").click(function(){
+		$(this).toggleClass("highlight");
+	});
 
 	});
 </script>
