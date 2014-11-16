@@ -93,3 +93,14 @@ if(!valid){
 
 	 .replaceWith()   
 	 for i.e. $("whatever").replaceWith(<p>Hello world</p>);
+
+	 .add() and .remove() together example
+	 		$("p").on("click", function(){
+			$(this).filter(function(){
+				if($(this).hasClass("highlight")){
+					$(this).removeClass("highlight");
+				}else{
+					$(this).addClass("highlight");
+				}
+			});
+		});
