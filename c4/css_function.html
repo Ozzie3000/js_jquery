@@ -24,6 +24,9 @@
 
   <p id="p_4">p tag 4 w/ default background, color, size, and border prior to jquery</p>
 
+  <p id="p_5">p tag 5 w/ default font size prior to jquery</p>
+  <button id="btn_1" class="btn">double font size</button>
+
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
@@ -41,6 +44,13 @@
 		$("#p_4").css("background-color", "grey");
 		//css shorthand
 		$("#p_4").css("border", "2px solid black");
+
+		//make font bigger based on user input
+		var base_size = $("#p_5").css("font-size");
+		base_size = parseInt(base_size);
+		$("#btn_1").on("click", function(){
+			$("#p_5").css("font-size", base_size * 2);
+		});
 
 	});
 </script>
