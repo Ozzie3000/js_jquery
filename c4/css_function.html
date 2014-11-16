@@ -22,7 +22,7 @@
   <p id="p_2">p tag 2 w/ background white</p>
   <p id="p_3">p tag 3 w/ background blue</p>
 
-  <p id="p_4">p tag 4 w/ default background, color, size prior to jquery</p>
+  <p id="p_4">p tag 4 w/ default background, color, size, and border prior to jquery</p>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
@@ -39,6 +39,8 @@
 		$("#p_4").css("font-size", "150%");
 		$("#p_4").css("color", "teal");
 		$("#p_4").css("background-color", "grey");
+		//css shorthand
+		$("#p_4").css("border", "2px solid black");
 
 	});
 </script>
