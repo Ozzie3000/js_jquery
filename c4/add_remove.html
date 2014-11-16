@@ -7,7 +7,15 @@
 <script type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	.highlight{
+		font-size: 120%;
+		font-family: "Oswald";
+		color: red;
+		background-color: blue;
+		font-weight: 700;
+	}
+</style>
 </head>
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
@@ -20,13 +28,25 @@
   <p>p tag 1</p>
   <p>p tag 1</p>
 
+  <span>Won't work on me</span>
+  <span>Won't work on me</span>
+  <span>Won't work on me</span>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$("p").on("click", function(){
+			$(this).filter(function(){
+				if($(this).hasClass("highlight")){
+					$(this).removeClass("highlight");
+				}else{
+					$(this).addClass("highlight");
+				}
+			})
+			
+		});
 
 
 	});
