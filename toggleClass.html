@@ -22,7 +22,17 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
+		$("p").on("click", function(){
+			$(this).filter(function(){
+				if($(this).hasClass("highlight")){
+					$(this).removeClass("highlight");
+				}else{
+					$(this).addClass("highlight");
+				}
+			});
+		});
 
+	//or a shorter version is with toggleClass
 
 
 	});
