@@ -18,7 +18,7 @@
   <button id="p_1">Pic 1 source</button>
   <br /><br /><br />
 
-  <img src="" alt="something" id="tree_2">
+  <img src="" alt="a picture" id="tree_2" style="width:20%;" title="you pick what goes here">
   <button id="p_2">Pic 2 source</button>
   <button id="p_3">remove src attr</button>
 
@@ -35,6 +35,11 @@
 		$("#p_2").on("click", function(){
 			var pic2_source = prompt("give me a url of a pic");
 			$("#tree_2").attr("src", pic2_source);
+		});
+
+		$("#p_3").on("click", function(){
+			alert("removing source url");
+			$("#tree_2").removeAttr("src");
 		});
 
 	});
