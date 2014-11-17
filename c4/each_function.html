@@ -14,15 +14,30 @@
 	<br /><br />
   <h1>.each(function(){});</h1>
 
+	<div class="container">
+	  <p id="p_1">p tag. paragraph 1 <a href="www.amazon.com">amazon</a></p>
+	  <p id="p_2">p tag. paragraph 2 <a href="www.yahoo.com">yahoo</a></p>
+	  <p id="p_3">p tag. paragraph 3 <a href="www.google.com">google.com</a></p>
+	  <button class="btn illu" id="btn_1">each func</button>
+	</div>
+	<br /><br />
 
+	<span>External links on page</span>
+	<ol id="list">
 
-
+	</ol>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$("#btn_1").on("click", function(){
+			$("p").each(function(){
+				$(this).css("color", "red");
+				var external_link = $(this).children().attr("href");
+				$("#list").append("<li>"+external_link+"</li>");
+			});
+		});
 
 
 	});
