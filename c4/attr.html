@@ -14,16 +14,18 @@
 	<br /><br />
   <h1>.attr() has two functions</h1>
 
-
-
+  <img src="http://pngimg.com/upload/tree_PNG212.png" alt="tree" id="tree_1">
+  <button id="p_1">Pic 1 source</button>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
-
+		var pic1_source = $("#tree_1").attr("src");
+		$("#p_1").on("click", function(){
+			alert(pic1_source);
+		});
 
 	});
 </script>
