@@ -4,18 +4,36 @@
 <title>JS and jQuery | hover function</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
+<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<style type="text/css">
+  #menu{
+    background-color: #4d5d53;
+    color: white;
+    font-size: 120%;
+    cursor: crosshair;
+    width: 150px;
+    padding-left: 5px;
+  }
+  ul li{
+    border: 2px solid black;
+  }
+ 
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
-	$(document).ready(function(){
-		//$("h1").hide().slideDown(1000);
+  $(document).ready(function(){
+    //$("h1").hide().slideDown(1000);
 
+    $("#menu").hover(function(){
+      $("#sub_menu").show();
+    }, function (){
+      $("#sub_menu").hide();
+    });  //end hover
 
+    //option 2 w/o anon functions
 
-
-	}); //end doc ready
+  }); //end doc ready
 </script>
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
 </head>
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
