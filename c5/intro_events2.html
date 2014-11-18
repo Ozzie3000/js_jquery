@@ -7,14 +7,18 @@
 <script type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#this_me{
+
+	}
+</style>
 </head>
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
   <h1>intro to events 2</h1>
 
-
+  <div id="this_me"></div>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -22,11 +26,11 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-		$("#_me").mouseover(function(){
+		$("#this_me").mouseover(function(){
 			alert("Bonjourno");
 		});
 
-		$("#_me").mouseout(function(){
+		$("#this_me").mouseout(function(){
 			alert("Arrivederci");
 		});
 
