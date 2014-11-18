@@ -8,9 +8,10 @@
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css">
+	body{ padding: 0 5% 0 5%;}
 	#this_me, #this_me2, #this_me3{
 		width: 80%;
-		height: 150px;
+		height: 80px;
 		background-color: grey;
 		color: #008080;
 		font-size: 110%;
@@ -38,11 +39,13 @@
 		//$("h1").hide().slideDown(1000);
 
 		$("#this_me").mouseover(function(){
-			alert("Bonjourno");
+			//alert("Bonjourno");
+			$(this).append("<span> Hello </span>");
 		});
 
 		$("#this_me2").mouseout(function(){
-			alert("Arrivederci");
+			//alert("Arrivederci");
+			$(this).append("<span> Konnichiwa </span>");
 		});
 
 	}); //end doc ready
