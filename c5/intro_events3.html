@@ -14,15 +14,19 @@
 	<br /><br />
   <h1>intro to events 3</h1>
 
+  <form action="#" method="get">
+	<fieldset><legend>A Form</legend><p><input name="button" type="button" id="btn_1" value="A Button"></p>
 
-
+	<p><input name="textfield" id="textfield" type="text"></p></fieldset>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$("#btn_1").click(function(){
+			$(this).val("You clicked me!");
+		});
 
 
 	}); //end doc ready
