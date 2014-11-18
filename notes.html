@@ -116,3 +116,16 @@ if(!valid){
 	.attr() returns the attribute's value as it's set in the HTML
 	.attr("argument1") returns value of that arg
 	.attr("arguement1","argument2") sets property and value
+
+	c5
+	events
+	$("jquery_selector").event();   // kind of like methods
+	
+	//or pass another function as an argument
+	$("jquery_selector").event(function_name) //leave off parenthesis 
+
+	//or use an anonymous function
+	$("jquery_selector").event(function(){
+		//your code goes here;
+		$(".hidden").show();  // like so
+	});
