@@ -9,13 +9,30 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css">
 	#menu{
+		font-size: 120%;
+	}
+	#menu, #small_menu{
 		background-color: #36454f;
 		color: #008080;
 		padding: 10px;
 	}
-	#sub_menu{
+	#sub_menu, #sub_menu2{
 		background-color: #4d5d53;
 	}
+	#small_menu{
+		font-size: 90%;
+		display: none;
+	}
+	ul li{
+		padding: 0 10px 0 10px;
+	}
+	ul.lit li.lit{
+		display: inline;
+	}
+	li:hover{
+		color: white;
+	}
+	#hide_me{ float: right;}
 </style>
 </head>
 <body>
@@ -23,7 +40,7 @@
 	<br /><br />
   <h1></h1>
 
-  <div id="menu">Menu: 
+  <div id="menu">Menu: <span id="hide_me">hide menu</span>
   	<nav id="sub_menu">Sub Menu: 
   		<ul>
   			<li>Home</li>
@@ -32,17 +49,41 @@
   			<li>Chapter 3</li>
   		</ul>
   	</nav>
+  </div>
 
+  <div id="small_menu">Show menu
+  	<nav id="sub_menu2">Sub Menu: 
+  		<ul class="lit">
+  			<li class="lit">Home</li>
+  			<li class="lit">Chapter 1</li>
+  			<li class="lit">Chapter 2</li>
+  			<li class="lit">Chapter 3</li>
+  		</ul>
+  	</nav>
+  </div></div>
+
+  <button id="click_me">Double Click Me</button>
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script>
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-		$("#sub_menu").click(function(){
-			$(this).hide(1500);
-		})
+		$("#menu").click(function(){
+			if($("#sub_menu").css("display","not:none")){
+				$(this).hide(1400);
+				$("#small_menu").show(1500);
+			}
+		});
 
+		$("#small_menu").click(function(){
+			$("#menu").show(1500);
+			$(this).hide(1400)
+		});
+
+		$("#click_me").dblclick(function(){
+			alert("Arrivederci");
+		});
 
 	}); //end doc ready
 </script>
