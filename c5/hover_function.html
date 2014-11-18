@@ -6,7 +6,7 @@
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css">
-  #menu{
+  #menu1, #menu2{
     background-color: #4d5d53;
     color: white;
     font-size: 120%;
@@ -24,13 +24,21 @@
   $(document).ready(function(){
     //$("h1").hide().slideDown(1000);
 
-    $("#menu").hover(function(){
-      $("#sub_menu").show();
+    $("#menu1").hover(function(){
+      $("#sub_menu1").show();
     }, function (){
-      $("#sub_menu").hide();
+      $("#sub_menu1").hide();
     });  //end hover
 
     //option 2 w/o anon functions
+    function showSubmenu(){
+      $("#sub_menu2").show();
+    }
+    function hideSubmenu(){
+      $("sub_menu2").hide();
+    }
+
+    $("#menu2").hover(showSubmenu, hideSubmenu);
 
   }); //end doc ready
 </script>
@@ -40,8 +48,8 @@
 	<br /><br />
   <h1>hover function</h1>
 
-  <div id="menu">Menu
-  	<ul id="sub_menu">
+  <div id="menu1">Menu
+  	<ul id="sub_menu1">
   		<li>Chapter 1</li>
   		<li>Chapter 2</li>
   		<li>Chapter 3</li>
@@ -49,7 +57,16 @@
   	</ul>
   </div>
 
+  <br /><br /><br />
 
+  <div id="menu2">Menu
+    <ul id="sub_menu2">
+      <li>Chapter 1</li>
+      <li>Chapter 2</li>
+      <li>Chapter 3</li>
+      <li>Chapter 4</li>
+    </ul>
+  </div>
 
 <script>
 </script>
