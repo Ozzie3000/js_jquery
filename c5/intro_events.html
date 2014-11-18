@@ -71,14 +71,14 @@
 
 		$("#menu").click(function(){
 			if($("#sub_menu").css("display","not:none")){
-				$(this).hide(1400);
-				$("#small_menu").show(1500);
+				$(this).hide(1000);
+				$("#small_menu").delay(1000).show(1600);
 			}
 		});
 
 		$("#small_menu").click(function(){
-			$("#menu").show(1500);
-			$(this).hide(1400)
+			$(this).hide(1000);
+			$("#menu").delay(1000).show(1600);
 		});
 
 		$("#click_me").dblclick(function(){
