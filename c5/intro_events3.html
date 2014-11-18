@@ -7,7 +7,11 @@
 <script type="text/javascript">
 </script>
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#textfield{
+		background-color: #ffcc00;
+	}
+</style>
 </head>
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
@@ -28,6 +32,13 @@
 			$(this).val("You clicked me!");
 		});
 
+		$('#textfield').focus(function() {
+				$(this).css('background-color','#dcdcdc');
+			});
+		
+		$('#textfield').blur(function() {
+				$(this).css('background-color','#ff2400');
+			});
 
 	}); //end doc ready
 </script>
