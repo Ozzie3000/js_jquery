@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>JS and jQuery | </title>
+<title>JS and jQuery | events</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <script type="text/javascript">
@@ -14,7 +14,15 @@
 	<br /><br />
   <h1></h1>
 
-
+  <div id="menu">Menu: 
+  	<nav id="sub_menu">Sub Menu: 
+  		<ul>
+  			<li>Home</li>
+  			<li>Chapter 1</li>
+  			<li>Chapter 2</li>
+  			<li>Chapter 3</li>
+  		</ul>
+  	</nav>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -22,7 +30,9 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$("#sub_menu").click(function(){
+			$(this).hide(1500);
+		})
 
 
 	}); //end doc ready
