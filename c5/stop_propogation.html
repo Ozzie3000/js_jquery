@@ -9,13 +9,21 @@
 	#example_1{ background-color: #00aedb;}
 	#e_1{ background-color: #0000ff;}
 	#e_2{ background-color: #8a2be2;}
+	#e_3{ background-color: #ff2400;}
+	ol{ background-color: #dcdcdc;}
+	#ol_1{ background-color: #ffcc00;}
+	#ol_2{ background-color: #ff4500;}
+	#ol_3{ background-color: #00755e;}
+
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$("#e_3").click(function(){
+			alert("You clicked me");
+		});
 
 
 	}); //end doc ready
@@ -31,6 +39,21 @@
   	<ul id="e_1">Banana Banana
   		<br />
   		<li id="e_2">Clementine Clementine</li>
+  		<li id="e_3">Durian fruit
+  			<br />
+  			<ol>Eggplant
+  				<br />
+  				<li id="ol_1"></li>
+  				<li id="ol_2"></li>
+  				<li id="ol_3">stuff
+  					<ul>More stuff
+  						<li>Rabbit hole</li>
+  					</ul>
+  				</li>
+
+
+  			</ol>
+  		</li>
   		<br />
   		
   	</ul>
