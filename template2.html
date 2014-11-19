@@ -10,7 +10,15 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
+		//$("selector").on("click", selector, ol_var, functionName);   //basic structure
 
+		function hidePtags(){
+			$("p").hide(1000);
+		}
+
+		var teller = {message:"Well Hello There!"};
+
+		$("#hidder").on("click", $("#here1"))
 
 
 
@@ -22,7 +30,13 @@
 	<br /><br />
   <h1></h1>
 
+  <p>P tag 1</p>
+  <p>P tag 2</p>
+  <p>P tag 3</p>
+  <p>P tag 4</p>
+  <p>P tag 5</p>
 
+  <span i="here1"></span>
 
 
 
