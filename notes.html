@@ -159,7 +159,7 @@ $("selector").off();  //turns off all events
 if using either of those to in a selector function.  You must include the new behavior that replaces it inside that same selection for it to work
 
 // event propogation
-stopPropogation(); prevents an event from passing onto any ancestor tags
+stopPropogation(); prevents an event from passing onto any ancestor tags  (to meet it seems to work like;  children().andSelf(); )
 $("#theLink").click(function(e){
 	//your amazing code goes here
 	e.stopPropagation();  //stop event from spreading
