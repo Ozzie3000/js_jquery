@@ -5,16 +5,24 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#xvar{
+		color: red;
+	}
+	#yvar{
+		color: blue;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-		$(document).click(function (){
+		$(document).click(function(e){
 			var xPos = e.pageX;
 			var yPos = e.pageY;
-			alert("x-Postion: "+xPos+"y-position"+yPos);
+			//alert("x-postion: "+xPos+" y-position "+yPos);
+			$("#coords").append("<li>x-postion: <span id='xvar'>"+xPos+"</span> y-position: <span id='yvar'>"+yPos+"</li>");
 		}); //end click
 
 
@@ -26,7 +34,8 @@
 	<br /><br />
   <h1>x and y position</h1>
 
-
+  <ul id="coords">
+  </ul>
 
 
 
