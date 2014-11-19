@@ -11,7 +11,10 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$("#trickery").click(function(e){
+			alert("Got you!!");
+			e.preventDefault();
+		});
 
 
 	}); //end doc ready
@@ -22,7 +25,11 @@
 	<br /><br />
   <h1>prevent default behavior</h1>
 
-
+  <p>Links, but one has code to prevent your escape! Muhahahaha</p>
+  <ul>
+  	<li><a href="http://www.amazon.com">Amazon</a></li>
+  	<li><a href="http://www.google.com" id="trickery">Google</a></li>
+  </ul>
 
 
 
