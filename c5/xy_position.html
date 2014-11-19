@@ -11,7 +11,11 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
-
+		$(document).click(function (){
+			var xPos = e.pageX;
+			var yPos = e.pageY;
+			alert("x-Postion: "+xPos+"y-position"+yPos);
+		}); //end click
 
 
 	}); //end doc ready
