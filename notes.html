@@ -164,3 +164,11 @@ $("#theLink").click(function(e){
 	//your amazing code goes here
 	e.stopPropagation();  //stop event from spreading
 });
+
+
+$("selector").on("click", selector, ol_var, functionName);
+-first is / are events.  use space to have more than one i.e. "click mouseover shift"
+-second is optional.  another selector if applying to another selector
+-third object literal or variable containing object literal
+		*object literal looks like this:  var linkVar = {message: "Hello World"};
+			- message is property,  "" is value
