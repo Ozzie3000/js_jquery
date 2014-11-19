@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>JS and jQuery | </title>
+<title>JS and jQuery | object literal</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
@@ -10,7 +10,14 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
+		var linkVar = {message: "Help! I'm trapped in a Link"};
+		var pVar	={message: "Help! I'm trapped in a paragraph"};
 
+		function showMessage(evt){
+			alert(evt.data.message);
+		}
+		$("a").on("mouseover", linkVar, showMessage);
+		$("p").on("click", pVar, showMessage);
 
 
 
@@ -20,7 +27,7 @@
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
-  <h1></h1>
+  <h1>Object literal</h1>
 
 
 
