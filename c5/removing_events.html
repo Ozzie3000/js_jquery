@@ -11,8 +11,16 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 
+		$("a").mouseover(function(){
+			alert("Mouse entered my air space!");
+		});
 
+		$("#btn1").click(function(){
+			$("a").addClass("noHyper");
+			$(".noHyper").off();  //has to be in here
+		});
 
+		
 
 	}); //end doc ready
 </script>
@@ -22,7 +30,15 @@
 	<br /><br />
   <h1>removing events</h1>
 
-
+  <p>This will add a class to prevent pop-ups: </p>
+  <button id="btn1">Add noHyper</button>
+  
+  <ul>
+  	<li><a href="https://www.amazon.com">Amazon</a></li>
+  	<li><a href="https://www.google.com">Google</a></li>
+  	<li><a href="https://www.jquery.com">jQuery</a></li>
+  	<li><a href="https://www.youtube.com">YouTube</a></li>
+  </ul>
 
 
 
