@@ -158,6 +158,13 @@ $("selector").off("event");   //event is the event you want to turn off
 $("selector").off();  //turns off all events
 if using either of those to in a selector function.  You must include the new behavior that replaces it inside that same selection for it to work
 
+//chain within 1 function
+$("#menu1").hover(function(){
+      $("#sub_menu1").show();
+    }, function (){
+      $("#sub_menu1").hide();
+    });  //end hover
+
 // event propogation
 stopPropogation(); prevents an event from passing onto any ancestor tags  (to meet it seems to work like;  children().andSelf(); )
 $("#theLink").click(function(e){
