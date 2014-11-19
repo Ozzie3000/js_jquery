@@ -4,7 +4,7 @@
 <title>JS and jQuery | advanced event management</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css"></style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
@@ -13,13 +13,14 @@
 
 		//$("selector").on("click", selector, ol_var, functionName);   //basic structure
 
-		function hidePtags(){
+		function hidePtags(object_literal){
 			$("p").hide(1000);
+			alert(object_literal.data.message);
 		}
 
-		var teller = {message:"Well Hello There!"};
+		var teller = {message:"I am an inside an object literal"};
 
-		$("#hidder").on("click", $("#here1"))
+		$("#hidder").on("click", teller, hidePtags);
 
 
 	}); //end doc ready
@@ -30,13 +31,15 @@
 	<br /><br />
   <h1>advanced event management</h1>
 
+  <button id="hidder" class="btn">Click me</button>
   <p>P tag 1</p>
   <p>P tag 2</p>
   <p>P tag 3</p>
   <p>P tag 4</p>
-  <p>P tag 5</p>
+  <p>P tag 5<span id="here1"></span></p>
 
-  <span i="here1"></span>
+	<br /><br />
+  
 
 
 
