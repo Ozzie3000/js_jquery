@@ -15,6 +15,7 @@
 
 		function showMessage(evt){
 			alert(evt.data.message);
+			//alert(evt.data.message.length); //32 for linkVar  27 for pVar
 		}
 		$("a").on("mouseover", linkVar, showMessage);
 		$("p").on("click", pVar, showMessage);
@@ -29,7 +30,9 @@
 	<br /><br />
   <h1>Object literal</h1>
 
-
+  
+	<p>Click me now for your free reading!</p>
+	<a href="#"> # This link goes nowhere</a>
 
 
 
