@@ -5,16 +5,34 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	body{ padding: 3%;}
+	img {
+		height: 300px;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
+		
+		$("#do_stuff").on("click keypress", function(){
+			$("img").hide();
+		});  //key press only work on document
+
 		$(document).on("click keypress", function(){
 			$("img").hide();
 		});
 
-
+	/**** only does the 2nd function
+		$("#do_stuff").on("click hover", function(){
+			$("#pic_pic1").hide();
+		},
+		function(){
+			$("#pic_pic2").hide();
+		}
+		);
+	**********/
 
 	}); //end doc ready
 </script>
@@ -24,7 +42,10 @@
 	<br /><br />
   <h1>Multiple events in 1 function</h1>
 
-  <img src="http://meowaboutcosplay.com/guides_tutorials/link/e_link2.jpg" alt="Link" title="Link" id="pic_pic">
+  <button id="do_stuff" tabindex="1">Do stuff</button><br />
+
+  <img src="http://meowaboutcosplay.com/guides_tutorials/link/e_link2.jpg" alt="Link" title="Link" id="pic_pic1">
+  <img src="http://img1.wikia.nocookie.net/__cb20091226170420/zelda/images/0/0d/Princess_Zelda_(Twilight_Princess).png" alt="Link" title="Link" id="pic_pic2">
 
 
 
