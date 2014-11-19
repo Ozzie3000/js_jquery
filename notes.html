@@ -152,3 +152,8 @@ pageX, pageY, screenX, screenY, shiftKey, which, target, data
 to get key code
 String.fromCharCode(evt.which)   /evt just a variable name for event
 .preventDefault();  // stops browser from doing normal behavior.  i.e. use case: submitting a form, but checking fields before submitting.
+
+//removing events
+$("selector").off("event");   //event is the event you want to turn off
+$("selector").off();  //turns off all events
+if using either of those to in a selector function.  You must include the new behavior that replaces it inside that same selection for it to work
