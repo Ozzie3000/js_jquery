@@ -180,6 +180,16 @@ $("selector").on("click", selector, ol_var, functionName);
 		*object literal looks like this:  var linkVar = {message: "Hello World"};
 			- message is property,  "" is value
 
+//multiple events for 1 selection
+$("#do_stuff").on({
+			"click" : function(){
+				$("#pic_pic1").hide(1000);
+			}, //end click func
+			"mouseover" : function(){
+				$("#pic_pic2").hide(1000);
+			} //end mouseover func
+		}); //end
+
 	//event delagation to a parent selector when child not present
 	$("ol").on("click", "li", function(){
   	$(this).css("text-decoration","line-through");
@@ -195,12 +205,3 @@ $("selector").on("click", selector, ol_var, functionName);
 	});   
 	****  if a table grows by hundreds of tds you only need 1 code
 
-//multiple events for 1 selection
-$("#do_stuff").on({
-			"click" : function(){
-				$("#pic_pic1").hide(1000);
-			}, //end click func
-			"mouseover" : function(){
-				$("#pic_pic2").hide(1000);
-			} //end mouseover func
-		}); //end
