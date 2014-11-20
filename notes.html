@@ -179,3 +179,13 @@ $("selector").on("click", selector, ol_var, functionName);
 -third object literal or variable containing object literal
 		*object literal looks like this:  var linkVar = {message: "Hello World"};
 			- message is property,  "" is value
+
+//multiple events for 1 selection
+$("#do_stuff").on({
+			"click" : function(){
+				$("#pic_pic1").hide(1000);
+			}, //end click func
+			"mouseover" : function(){
+				$("#pic_pic2").hide(1000);
+			} //end mouseover func
+		}); //end
