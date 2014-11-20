@@ -189,6 +189,11 @@ $("selector").on("click", selector, ol_var, functionName);
 	});
 		*** notice $(this) refers not to the initial selector, but the 2nd optional argument "li" 
 
+	//event delegation can be used to slim down code and speed up processing
+	$("table").on("click", "td", function(){
+		//your code goes here;
+	});   
+	****  if a table grows by hundreds of tds you only need 1 code
 
 //multiple events for 1 selection
 $("#do_stuff").on({
