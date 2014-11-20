@@ -187,6 +187,8 @@ $("selector").on("click", selector, ol_var, functionName);
 	$("ol").on("dblclick", "li", function(){
   	$(this).css("text-decoration","none");
 	});
+		*** notice $(this) refers not to the initial selector, but the 2nd optional argument "li" 
+
 
 //multiple events for 1 selection
 $("#do_stuff").on({
