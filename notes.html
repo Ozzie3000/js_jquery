@@ -180,6 +180,14 @@ $("selector").on("click", selector, ol_var, functionName);
 		*object literal looks like this:  var linkVar = {message: "Hello World"};
 			- message is property,  "" is value
 
+	//event delagation to a parent selector when child not present
+	$("ol").on("click", "li", function(){
+  	$(this).css("text-decoration","line-through");
+	});
+	$("ol").on("dblclick", "li", function(){
+  	$(this).css("text-decoration","none");
+	});
+
 //multiple events for 1 selection
 $("#do_stuff").on({
 			"click" : function(){
