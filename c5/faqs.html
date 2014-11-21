@@ -33,6 +33,9 @@ h2.close {
 		//$("h1").hide().slideDown(1000);
 		
 		$(".answer").hide();
+		$(".main h2").click(function(){
+			var $answer = $(this).next(".answer");
+		})
 
 
 	}); //end doc ready
