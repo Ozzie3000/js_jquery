@@ -35,7 +35,13 @@ h2.close {
 		$(".answer").hide();
 		$(".main h2").click(function(){
 			var $answer = $(this).next(".answer");
-		})
+			if($answer.is(":hidden")){
+				$answer.slideDown();
+			}else{
+				$answer.fadeOut();
+			}
+			se
+		}); //end of click
 
 
 	}); //end doc ready
