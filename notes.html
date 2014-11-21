@@ -207,3 +207,14 @@ $("#do_stuff").on({
 
 //use js on FAQs pages to hide answers. and js to show desired answer
 ** if you use css to hide answers, people with js disabled will not be able to see answers.  Worst case scenario with no JS people will see all answers.
+
+c6
+//different show and hides
+		$("#show").hide();
+		$("#show").delay(2000).show(2000);  //have to delay for illustration purposes
+		$("#hide").delay(4000).hide(2000); //same as above
+		$("#toggle").delay(6000).toggle(2000);
+		$("#fadeIn").hide().delay(8000).fadeIn(2000);
+		$("#fadeOut").delay(10000).fadeOut(2000);
+		$("#fadeToggle").delay(12000).fadeToggle(2000);
+		$("#fadeTo").delay(14000).fadeTo(2000, 0.5);
