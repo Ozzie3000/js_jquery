@@ -37,10 +37,11 @@ h2.close {
 			var $answer = $(this).next(".answer");
 			if($answer.is(":hidden")){
 				$answer.slideDown();
+				$(this).addClass("close");
 			}else{
 				$answer.fadeOut();
+				$(this).removeClass("close");
 			}
-			se
 		}); //end of click
 
 
