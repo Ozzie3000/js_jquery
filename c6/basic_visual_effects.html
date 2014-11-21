@@ -5,13 +5,17 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#show{
+		display: none;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
-		
-
+		$("#show").hide();
+		$("#show").delay(3000).show(1000);  //have to delay for illustration purposes
 
 
 	}); //end doc ready
@@ -24,15 +28,15 @@
 
    <div id="menu">Menu: <span id="hide_me">hide menu</span>
   	<nav id="sub_menu">Sub Menu: 
-  		<ul>
-  			<li id="show">Show</li>
+  		<ol>
+  			<li id="show">Show 0</li>
   			<li id="hide">Hide 1</li>
   			<li id="toggle">toggle 2</li>
   			<li id="fadeIn">fadeIn 3</li>
   			<li id="fadeOut">fadeOut 4</li>
   			<li id="fadeToggle">fadeToggle 5</li>
   			<li id="fadeTo">fadeTo 6</li>
-  		</ul>
+  		</ol>
   	</nav>
   </div>
 
