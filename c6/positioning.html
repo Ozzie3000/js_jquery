@@ -4,8 +4,20 @@
 <title>JS and jQuery | positioning</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
+<style type="text/css">
+	#un1, #pw1{ color: grey;}
+	#login{
+		background-color: #666669;
+		height: 45px;
+		position: absolute;
+		top: 1%;
+		right: 2%;
+	}
+	#log{
+		color: #00ffff;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -22,7 +34,11 @@
 	<br /><br />
   <h1>Css Positioning</h1>
 
-  
+  <nav id="login">
+  	<span id="log">Login: </span>
+  	<input id="un1" type="text" value="Username" onfocus="value=''" onblur="value='Username'"/>
+  	<input id="pw1" type="password" value="Password" onfocus="value=''" onblur="value='Password'"/>
+  </nav>
 
 
 
