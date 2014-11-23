@@ -6,13 +6,18 @@
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css">
-	#un1, #pw1{ color: grey;}
-	#login{
+	#guider{
 		background-color: #666669;
-		height: 45px;
+		padding-top: 15px;
 		position: absolute;
 		top: 1%;
 		right: 2%;
+		width: 50%;
+	}
+	#un1, #pw1{ color: grey;}
+	#login{
+		background-color: #666669;
+		padding: 10px 30px;
 	}
 	#log{
 		color: #00ffff;
@@ -22,7 +27,16 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
-		
+		$("#login").hide()
+		$("#guider").on({
+			"mouseover" : function(){
+				//$(this).children(:not(this)).hide();
+				$(this).children().slideDown(1000);
+			}, //end mouseover
+			"mouseleave" : function(){
+				$(this).children().slideUp(1000);
+			} //end mouseleave
+		}); //end multi func
 
 
 
@@ -34,12 +48,13 @@
 	<br /><br />
   <h1>Css Positioning</h1>
 
-  <nav id="login">
-  	<span id="log">Login: </span>
-  	<input id="un1" type="text" value="Username" onfocus="value=''" onblur="value='Username'"/>
-  	<input id="pw1" type="password" value="Password" onfocus="value=''" onblur="value='Password'"/>
-  </nav>
-
+  <div id="guider">
+	  <nav id="login">
+	  	<span id="log">Login: </span>
+	  	<input id="un1" type="text" value="Username" onfocus="value=''" onblur="value='Username'"/>
+	  	<input id="pw1" type="password" value="Password" onfocus="value=''" onblur="value='Password'"/>
+	  </nav>
+	</div>
 
 
 <script>
