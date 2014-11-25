@@ -32,7 +32,7 @@
 }
 
 #login .close {
-	background-image: url(../_images/close.png);
+	background-image: url(../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E_images/close.png);
 }
 
 #open:hover {
@@ -66,8 +66,8 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
-		$("#open").click(function(event){
-			event.preventDefault();
+		$("#open").click(function(evt_object){
+			evt_object.preventDefault();
 			$("#login form").slideToggle();
 			$(this).toggleClass("close");
 		});// end click
