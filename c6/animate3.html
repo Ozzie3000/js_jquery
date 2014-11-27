@@ -5,15 +5,38 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#message{
+		position: absolute;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
-		$("#elemente").slideUp(1000,"linear");
+		$("#elemente").delay(1000).slideUp(2000,"linear");
 
+		$("#message").delay(2000).animate(
+		{
+			top: "25%",
+			left: "40%",
+			opacity: .5,
+			"font-size": "26px"
+		}, //end object literal
+		1500,
+		"linear"
+		); //end animate function
+		
+/*****   debug code... missing absolute position in styles first before animating position
+		$("#message").delay(2000).animate(
+		{
+			left: "600px"
+		}, //end object literal
+		1500
+		); //end animate function
+	****/
 
 	}); //end doc ready
 </script>
@@ -25,7 +48,11 @@
 
   <p id="elemente">P tag with elemente id</p>
 
-
+  <p id="message">"Just between you and me <br/>
+		I've got something to say<br/>
+		Wanna get it straight<br/>
+		Before the sun goes down<br/>
+	</p>
 
 
 
