@@ -4,7 +4,7 @@
 <title>JS and jQuery | animate</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css"></style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -12,7 +12,10 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
-
+		$("#ani_me").animate({
+			"width": "448px",
+			"opacity": 0.5
+		}, 2000);
 
 
 	}); //end doc ready
@@ -23,7 +26,9 @@
 	<br /><br />
   <h1>Animate</h1>
 
-  <img src="/projects/pictures">
+  <img src="../../pictures/e_link2.jpg">
+  
+  <img src="../../pictures/e_link2.jpg" id="ani_me">
 
 
 
