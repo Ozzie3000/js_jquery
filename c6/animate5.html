@@ -17,6 +17,41 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
+		$("#ani_me1").click(function(){
+			$(this).animate(
+			{
+				left: "40%",
+				borderColor: "blue",
+				width: "25%"
+			},
+			1500,
+			"easeInBounce"
+			); //end .animate()
+		}); //end click func
+
+		$("#ani_me2").click(function(){
+			$(this).animate(
+			{
+				left: "40%",
+				borderColor: "blue",
+				width: "25%"
+			},
+			1500,
+			"easeInOutSine"
+			); //end .animate()
+		}); //end click func
+
+		$("#ani_me3").click(function(){
+			$(this).animate(
+			{
+				left: "40%",
+				borderColor: "blue",
+				width: "25%"
+			},
+			1500,
+			"easeInCubic"
+			); //end .animate()
+		}); //end click func
 
 
 	}); //end doc ready
