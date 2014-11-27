@@ -4,15 +4,30 @@
 <title>JS and jQuery | animate 4</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
+<style type="text/css">
+	#ani_me{
+		position: absolute;
+		border: 2px solid red;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
-
+		$("img").click(function(){
+			$(this).animate(
+			{
+				left: "40%",
+				borderColor: "blue",
+				width: "25%"
+			},
+			1500,
+			"easeInBounce"
+			); //end .animate()
+		}); //end click func
 
 
 	}); //end doc ready
@@ -23,7 +38,7 @@
 	<br /><br />
   <h1>.animate() 4. with other jQuery methods</h1>
 
-  
+  <img src="../../pictures/e_link2.jpg" id="ani_me">
 
 
 
