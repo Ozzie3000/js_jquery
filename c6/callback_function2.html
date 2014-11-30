@@ -6,9 +6,20 @@
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css">
-	#photo, #caption{
+	#wrapper{
+		position: relative;
 		display: table;
 		margin: 0 auto;
+	}
+	#photo, #caption{
+		
+	}
+	#caption{
+		position: absolute;
+		bottom: 2%;
+		color: blue;
+		border: 2px solid red;
+		padding: 5px;
 	}
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -40,10 +51,12 @@
 	<br /><br />
   <h1>action after effect is complete 2</h1>
 
-  <img id="photo" src="http://meowaboutcosplay.com/guides_tutorials/link/e_link2.jpg" />
-  <div id="caption">
-  	This is Link
-  </div>
+  <div id="wrapper">
+	  <img id="photo" src="http://meowaboutcosplay.com/guides_tutorials/link/e_link2.jpg" />
+	  <div id="caption">
+	  	This is Link
+	  </div>
+	</div>
 
 
 
