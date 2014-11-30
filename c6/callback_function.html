@@ -12,8 +12,11 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
+		$("#photo").next().andSelf().hide();
 
-
+		$("#photo").fadeIn(1500, function(){
+			$("#caption").fadeIn(1000);
+		});
 
 	}); //end doc ready
 </script>
