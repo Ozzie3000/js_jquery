@@ -28,7 +28,19 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
-
+		$("#photo").animate(
+		{
+			left: "+=400px"
+		},
+		1500,
+		function(){ //first callback
+			$("#caption").fadeIn(1500, 
+				function(){ //2nd callback
+					$("#photo, #caption").fadeOut(1500);
+				} //end of 2nd callback
+			); //end fadeIn
+		} //end first callback
+		); //end animate
 
 
 	}); //end doc ready
