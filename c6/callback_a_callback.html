@@ -11,11 +11,12 @@
 		display: table;
 		margin: 0 auto;
 	}
-	#photo, #caption{
-		
+	#photo{
+		position: absolute;
+		margin-top: 35px;
 	}
 	#caption{
-		position: absolute;
+		position: relative;
 		bottom: 2%;
 		color: blue;
 		border: 2px solid red;
@@ -28,7 +29,7 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
-		$("#photo").animate(
+		$("#photo").delay(1500).animate(
 		{
 			left: "+=400px"
 		},
