@@ -16,10 +16,10 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
-		$("#photo").width(0).height(0).css("opacity", "0px");
+		$("#photo").width(0).height(0).css("opacity", "0");
 		$("#caption").hide();
 
-		$("#photo").animate(
+		$("#photo").delay(1000).animate(
 		{
 			"width": "224px",
 			height: "300px",
