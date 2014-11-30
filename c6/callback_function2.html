@@ -4,7 +4,7 @@
 <title>JS and jQuery | action after effect is complete</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css">
 	#photo, #caption{
 		display: table;
@@ -16,8 +16,20 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
-		
+		$("#photo").width(0).height(0).css("opacity", "0px");
+		$("#caption").hide();
 
+		$("#photo").animate(
+		{
+			"width": "224px",
+			height: "300px",
+			opacity: 1
+		},
+		1500,
+		function(){
+			$("#caption").fadeIn(1000);
+		} //end anon func
+		);  //end animate
 
 
 	}); //end doc ready
