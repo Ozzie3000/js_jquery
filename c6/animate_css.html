@@ -12,10 +12,12 @@
 		-moz-transition: opacity 2s;
 		-o-transition: opacity 2s;
 		transition: opacity 2s;
+		border: 3px solid blue;
 	}
 	h2.fade_me{
 		opacity: 0;
 	}
+	
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -23,7 +25,9 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
-
+		$("h2").on("click", function(){
+			$(this).toggleClass("fade_me");
+		});
 
 
 	}); //end doc ready
