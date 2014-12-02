@@ -7,8 +7,8 @@
 <link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css">
 	#dashboard {
-	width: 110px;
-	background-color: rgb(255,211,224);
+	width: 100px;
+	background-color: rgb(210,211,224);
 	padding: 20px 20px 0 20px;
 	position: absolute;
 	left: -92px;
@@ -18,6 +18,9 @@
 		margin-bottom: 20px;
 		border: 1px solid rgb(0,0,0);
 	}
+	#directions{
+		text-align: center;
+	}
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -26,9 +29,18 @@
 		//$("h1").hide().slideDown(1000);
 		$("#dashboard").hover(
 			function(){
-
+				//console.log("mouseEnter");  //debug code to test
+				$(this).animate(
+				{
+					left: 0,
+					"background-color": "rgb(27,45,94"
+				}, //end of object literal
+				650,
+				"easeInSine"
+				); //end of animate
 			},
 			function(){
+				//console.log("mouseLeave"); //debug code to test
 
 			}
 		); //end hover
@@ -55,8 +67,7 @@
 		</div>
 		<div class="content">
 			<div class="main">
-				<h1>Slide in Dashboard</h1>
-					<p>Mouse over the pink stripe on the left edge of this page</p>
+					<p id="directions">Mouse over the pink stripe on the left edge of this page</p>
 			</div>
 		</div>
 	</div>
