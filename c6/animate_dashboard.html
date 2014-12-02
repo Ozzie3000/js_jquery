@@ -4,8 +4,21 @@
 <title>JS and jQuery | animate 6</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
+<style type="text/css">
+	#dashboard {
+	width: 110px;
+	background-color: rgb(255,211,224);
+	padding: 20px 20px 0 20px;
+	position: absolute;
+	left: -92px;
+	z-index: 100;
+}
+#dashboard img {
+	margin-bottom: 20px;
+	border: 1px solid rgb(0,0,0);
+}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
@@ -23,9 +36,23 @@
 	<br /><br />
   <h1>Animate 6.  Move a dashboard</h1>
 
+  <div class="wrapper">
   
-
-
+		<div id="dashboard">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/blue_h.jpg" width="70" height="70" alt="blue">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/green_h.jpg" width="70" height="70" alt="green">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/orange_h.jpg" width="70" height="70" alt="orange">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/purple_h.jpg" width="70" height="70" alt="purple">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/red_h.jpg" width="70" height="70" alt="red">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/yellow_h.jpg" width="70" height="70" alt="yellow">
+		</div>
+		<div class="content">
+			<div class="main">
+				<h1>Slide in Dashboard</h1>
+					<p>Mouse over the pink stripe on the left edge of this page</p>
+			</div>
+		</div>
+	</div>
 
 <script>
 </script>
