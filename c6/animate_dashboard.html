@@ -9,7 +9,7 @@
 	#dashboard {
 	width: 110px;
 	background-color: rgb(210,211,224);
-	padding: 20px 20px 0 40px;
+	padding: 20px 10px 0 40px;
 	position: absolute;
 	left: -112px;
 	z-index: 100;
@@ -32,13 +32,13 @@
 				//console.log("mouseEnter");  //debug code to test
 				$(this).animate(
 				{
-					left: 0,
+					left: "0",
 					"background-color": "rgb(27,45,94)"
 				}, //end of object literal
 				500,
 				"easeInSine"
 				); //end of 1st animate
-			},
+			},  //end 1st anon func
 			function(){
 				//console.log("mouseLeave"); //debug code to test
 				$(this).animate(
@@ -49,10 +49,17 @@
 				1500,
 				"easeOutBounce"
 				); //end 2nd animate 
-			}
+			} //end 2nd anon func
 		); //end hover
 
-
+		$("img").hover(
+			function(){
+				$(this).css("opacity", "0.5");
+			},
+			function(){
+				$(this).css("opacity","1");
+			}
+		)
 
 	}); //end doc ready
 </script>
