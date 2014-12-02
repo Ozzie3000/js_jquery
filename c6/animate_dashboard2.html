@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS and jQuery | animate 6b</title>
+<meta charset="utf-8">
+<meta name="description" content="HTML5 demos" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
+<style type="text/css">
+	#dashboard {
+	width: 110px;
+	background-color: rgb(210,211,224);
+	padding: 20px 10px 0 40px;
+	position: absolute;
+	left: -112px;
+	z-index: 100;
+	}
+	#dashboard img {
+		margin-bottom: 20px;
+		border: 1px solid rgb(0,0,0);
+	}
+	#directions{
+		text-align: center;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//$("h1").hide().slideDown(1000);
+		$("#dashboard").hover(
+			function(){
+				//console.log("mouseEnter");  //debug code to test
+				$(this).stop().animate(
+				{
+					left: "0",
+					"background-color": "rgb(27,45,94)"
+				}, //end of object literal
+				500,
+				"easeInSine"
+				); //end of 1st animate
+			},  //end 1st anon func
+			function(){
+				//console.log("mouseLeave"); //debug code to test
+				$(this).stop().animate(
+				{
+					left: "-112px",
+					"background-color": "rgb(210,211,224)"
+				},
+				1500,
+				"easeOutBounce"
+				); //end 2nd animate 
+			} //end 2nd anon func
+		); //end hover
+
+		$("img").hover(
+			function(){
+				$(this).css("opacity", "0.5");
+			},
+			function(){
+				$(this).css("opacity","1");
+			}
+		)
+
+	}); //end doc ready
+</script>
+</head>
+<body>
+	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
+	<br /><br />
+  <h1>Animate 6b.  Move a dashboard</h1>
+
+  <div class="wrapper">
+  
+		<div id="dashboard">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/blue_h.jpg" width="70" height="70" alt="blue">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/green_h.jpg" width="70" height="70" alt="green">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/orange_h.jpg" width="70" height="70" alt="orange">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/purple_h.jpg" width="70" height="70" alt="purple">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/red_h.jpg" width="70" height="70" alt="red">
+			<img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/yellow_h.jpg" width="70" height="70" alt="yellow">
+		</div>
+		<div class="content">
+			<div class="main">
+					<p id="directions">Mouse over the pink stripe on the left edge of this page</p>
+			</div>
+		</div>
+	</div>
+
+<script>
+</script>
+</body>
+</html>
