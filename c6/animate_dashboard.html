@@ -7,11 +7,11 @@
 <link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css">
 	#dashboard {
-	width: 100px;
+	width: 110px;
 	background-color: rgb(210,211,224);
-	padding: 20px 20px 0 20px;
+	padding: 20px 20px 0 40px;
 	position: absolute;
-	left: -92px;
+	left: -112px;
 	z-index: 100;
 	}
 	#dashboard img {
@@ -33,15 +33,22 @@
 				$(this).animate(
 				{
 					left: 0,
-					"background-color": "rgb(27,45,94"
+					"background-color": "rgb(27,45,94)"
 				}, //end of object literal
-				650,
+				500,
 				"easeInSine"
-				); //end of animate
+				); //end of 1st animate
 			},
 			function(){
 				//console.log("mouseLeave"); //debug code to test
-
+				$(this).animate(
+				{
+					left: "-112px",
+					"background-color": "rgb(210,211,224)"
+				},
+				1500,
+				"easeOutBounce"
+				); //end 2nd animate 
 			}
 		); //end hover
 
