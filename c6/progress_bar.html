@@ -41,7 +41,7 @@
 		height: 50px;
 	}
 	.animate {
-	   -webkit-animation-name: growProgressBar;
+	  -webkit-animation-name: growProgressBar;
 		-webkit-animation-duration: 3s;
 		-webkit-animation-fill-mode: forwards;
 		animation-name: growProgressBar;
@@ -75,14 +75,17 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
-		$("#start").click(function(){
-			$(".progress_bar").css("animation-play-state", "running");
-		});
-
-		$("#pause").click(function(){
-			$(".progress_bar").css("animation-play-state", "paused");
-		});
-
+		$('#play').click(function(evt) {
+			$('#pause').removeClass('active');
+			$(this).addClass('active');
+			$('.progress_bar').addClass('animate');
+			$('.progress_bar').css('animation-play-state','running');
+		}); // end click
+		$('#pause').click(function(evt) {
+			$('#play').removeClass('active');
+			$(this).addClass('active');
+			$('.progress_bar').css('animation-play-state','paused');
+		}); // end click
 
 
 	}); //end doc ready
