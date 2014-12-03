@@ -26,8 +26,9 @@
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
 		
-		$("img").click(function(){
+		$("img").click(function(evt){
 			$(this).toggleClass("faded");
+			evt.stopPropagation(); // prevent this click from going to the HTML element
 		});
 
 
