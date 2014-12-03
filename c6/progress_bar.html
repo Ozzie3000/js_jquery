@@ -23,6 +23,7 @@
 		animation-name: grow_progress_bar;
 		animation-duration 10s;
 		animation-fill-mode: forwards;
+		animation-play-state: paused;
 	}
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -30,7 +31,13 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
-		
+		$("#start").click(function(){
+			$(".progress_bar").css("animation-play-state", "running");
+		});
+
+		$("#pause").click(function(){
+			$(".progress_bar").css("animation-play-state", "paused");
+		});
 
 
 
