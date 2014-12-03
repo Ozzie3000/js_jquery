@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS and jQuery | progress bar</title>
+<meta charset="utf-8">
+<meta name="description" content="HTML5 demos" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
+<style type="text/css">
+	@-webkit-keyframes growProgressBar{
+		0% {
+			width: 0;
+			background-color: red;
+		}
+		50%  {
+			background-color: yellow;
+		}
+		100% {
+			width: 88%;
+			background-color: green;
+		}
+	}
+
+	@keyframes growProgressBar{
+		0% {
+			width: 0%;
+			background-color: red;
+		}
+		50% {
+			background-color: yellow;
+		}
+		100% {
+			width:88%;
+			background-color: green;
+		}
+	}
+
+	.progress_bar {
+		width: 0%;
+		margin-left: 12%;
+		margin-top: 40px;
+		height: 50px;
+	}
+	.animate {
+	  -webkit-animation-name: growProgressBar;
+		-webkit-animation-duration: 3s;
+		-webkit-animation-fill-mode: forwards;
+		animation-name: growProgressBar;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+	}
+	.buttonContainer {
+		float: left;
+		width: 10%;
+	}
+	.button {
+		border-radius: 6px;
+		background: lightgrey;
+		text-align: center;
+		font-size: .8em;
+		padding: 4px 0 1px 0;
+		margin-top: 10px;
+	}
+	.button:hover {
+		color: white;
+		background-color: red;
+		cursor: pointer;
+	}
+	.active {
+		background-color: green;
+		color: white;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//$("h1").hide().slideDown(1000);
+		$('#play').click(function(evt) {
+			$('#pause').removeClass('active');
+			$(this).addClass('active');
+			$('.progress_bar').addClass('animate');
+			$('.progress_bar').css('animation-play-state','running');
+		}); // end click
+		$('#pause').click(function(evt) {
+			$('#play').removeClass('active');
+			$(this).addClass('active');
+			$('.progress_bar').css('animation-play-state','paused');
+		}); // end click
+
+
+	}); //end doc ready
+</script>
+</head>
+<body>
+	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
+	<br /><br />
+  <h1>progress bar: using @keyframes</h1>
+
+  <div class="wrapper">
+		<div class="content">
+			<div class="main">
+				<div class="buttonContainer">
+					<div class="button" id="play"><h2>Play</h2></div>
+					<div class="button" id="pause"><h2>Pause</h2></div>
+				</div>
+
+			<div class="progress_bar"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+<script>
+</script>
+</body>
+</html>
