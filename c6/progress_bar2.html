@@ -98,6 +98,9 @@
 			$('.progress_bar').css('animation-play-state','paused');
 		}); // end click
 	*/
+		var stat1 = "Play";
+		var stat2 = "Pause";
+		//console.log(stat);
 
 		$("#activator").on("click", function(){
 			//	if($(this).hasClass("acitve") == false){
@@ -109,6 +112,9 @@
 
 		$("#activator").on("click", function(){
 			$(".progress_bar").toggleClass("something other");
+			$("#pp").text(function(i, text){
+				return text === "Pause" ? "Play" : "Pause"
+			});
 		});
 
 		$("#reset").on("click", function(){
@@ -128,7 +134,7 @@
 		<div class="content">
 			<div class="main">
 				<div class="buttonContainer">
-					<div class="button" id="activator"><h2>Play</h2></div>
+					<div class="button" id="activator"><h2 id="pp">Play</h2></div>
 					<div class="button" id="reset"><h2>Reset</h2></div>
 
 				</div>
