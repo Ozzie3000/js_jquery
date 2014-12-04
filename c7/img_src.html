@@ -17,11 +17,17 @@
 		font-size: .8em;
 		padding: 4px 0 1px 0;
 		margin-top: 10px;
+		min-width: 100px;
 	}
 	.button:hover {
 		color: white;
 		background-color: red;
 		cursor: pointer;
+	}
+	#change_me{
+		display: absolute;
+		display: table;
+		margin: auto;
 	}
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
@@ -41,9 +47,20 @@
 	<br /><br />
   <h1>Changing img src with jQuery</h1>
 
-  <button class="btn">Toggle between link and Zelda</button><br /><br />
+  <div class="wrapper">
+		<div class="content">
+			<div class="main">
+				<div class="buttonContainer">
+					<div class="button" id="linky"><h2>Link</h2></div>
+					<div class="button" id="zeldy"><h2>Zelda</h2></div>
+				</div>
 
-	<img src="#" alt="Link or Zelda. Guy is Link" id="change_me">  
+			
+			<img src="http://upload.wikimedia.org/wikipedia/commons/a/ae/Question_mark_3d.png" alt="Link or Zelda. Guy is Link" id="change_me">
+			</div>
+		</div>
+	</div>
+	  
 
 
 
