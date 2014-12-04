@@ -42,11 +42,21 @@
 	}
 	.animate {
 	  -webkit-animation-name: growProgressBar;
-		-webkit-animation-duration: 3s;
+		-webkit-animation-duration: 4s;
 		-webkit-animation-fill-mode: forwards;
 		animation-name: growProgressBar;
-		animation-duration: 3s;
+		animation-duration: 4s;
 		animation-fill-mode: forwards;
+		/*-webkit-animation-play-state: paused;
+		animation-play-state: paused;  */
+	}
+	.something{
+		-webkit-animation-play-state: running;
+		animation-play-state: running;
+	}
+	.other{
+		-webkit-animation-play-state: paused;
+		animation-play-state: paused;
 	}
 	.buttonContainer {
 		float: left;
@@ -75,6 +85,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		//$("h1").hide().slideDown(1000);
+		/*
 		$('#play').click(function(evt) {
 			$('#pause').removeClass('active');
 			$(this).addClass('active');
@@ -86,7 +97,19 @@
 			$(this).addClass('active');
 			$('.progress_bar').css('animation-play-state','paused');
 		}); // end click
+	*/
 
+		$("#activator").on("click", function(){
+				if($(this).hasClass("acitve") == false){
+					//$(this).removeClass("acitve");
+					$('.progress_bar').addClass('animate');
+					//$('.progress_bar').css('animation-play-state','running');
+				}
+		});
+
+		$("#activator").click(function(){
+			$(".progress_bar").toggleClass("something other");
+		});
 
 	}); //end doc ready
 </script>
@@ -100,11 +123,11 @@
 		<div class="content">
 			<div class="main">
 				<div class="buttonContainer">
-					<div class="button" id="play"><h2>Play</h2></div>
-					<div class="button" id="pause"><h2>Pause</h2></div>
+					<div class="button" id="activator"><h2>Play</h2></div>
+
 				</div>
 
-			<div class="progress_bar"></div>
+			<div class="progress_bar other"></div>
 			</div>
 		</div>
 	</div>
