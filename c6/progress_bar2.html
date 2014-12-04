@@ -111,6 +111,10 @@
 			$(".progress_bar").toggleClass("something other");
 		});
 
+		$("#reset").on("click", function(){
+			$(".progress_bar").removeClass("animate");
+		});
+
 	}); //end doc ready
 </script>
 </head>
@@ -124,6 +128,7 @@
 			<div class="main">
 				<div class="buttonContainer">
 					<div class="button" id="activator"><h2>Play</h2></div>
+					<div class="button" id="reset"><h2>Reset</h2></div>
 
 				</div>
 
