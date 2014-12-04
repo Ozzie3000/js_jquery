@@ -100,19 +100,20 @@
 	*/
 
 		$("#activator").on("click", function(){
-				if($(this).hasClass("acitve") == false){
+			//	if($(this).hasClass("acitve") == false){
 					//$(this).removeClass("acitve");
 					$('.progress_bar').addClass('animate');
 					//$('.progress_bar').css('animation-play-state','running');
-				}
+			//	}
 		});
 
-		$("#activator").click(function(){
+		$("#activator").on("click", function(){
 			$(".progress_bar").toggleClass("something other");
 		});
 
 		$("#reset").on("click", function(){
-			$(".progress_bar").removeClass("animate");
+			$(".progress_bar").removeClass("animate something");
+			$(".progress_bar").addClass("other");
 		});
 
 	}); //end doc ready
