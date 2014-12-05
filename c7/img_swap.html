@@ -5,15 +5,41 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	.button{
+		background-color: #949393;
+		width: 160px;
+		font-size: 22px;
+		padding: 2px 6px 2px;
+		margin-right: 20px;
+
+	}
+	.button:hover{
+		background-color: red;
+	}
+	.btn_container{
+		
+	}
+
+	img{
+		position: absolute;
+		margin: 0 auto;
+		left: 250px;
+		top: 170px;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+		var old_pic = $("#swap_me").replaceWith("<img src='http://wmdsfmag.com/wp-content/uploads/2013/08/2310808945_737204b551.jpg' alt='happy' id='swap_me'>");
 		$("#swapper").on("click", function(){
 			$("#swap_me").replaceWith("<img src='http://wmdsfmag.com/wp-content/uploads/2013/08/2310808945_737204b551.jpg' alt='happy' id='swap_me'>");
 		});
 		
+		$("#swap_back").on("click", function(){
+			$("#swap_me").replaceWith(old_pic);
+		});
 		
 
 
@@ -26,7 +52,11 @@
 	<br /><br />
   <h1>img swap with jQuery</h1>
   
-  <button id="swapper" class="btn">Swap Pictures</button><br /><br />
+  <div class="btn_container">
+	  <div id="swapper" class="btn button"><h3>Swap Pictures</h3></div><br />
+	   <div id="swap_back" class="btn button"><h3>Swap back</h3></div><br /><br />
+	</div>
+
   <img src="http://ih3.redbubble.net/image.5281151.6014/flat,550x550,075,f.jpg" alt="not happy" id="swap_me" title="click me">
 
 
