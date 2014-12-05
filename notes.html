@@ -249,3 +249,14 @@ you cannot animate more than 1 property for element.  ie CSS cannot animate bord
 	"opacity": 0.5;,
 	"font-size": "24px"
 }
+
+
+c7
+img properties
+//creat image object and set the existing img properties equal to the image object
+va newPhoto = new Image(); // image object
+newPhoto.src = "images/newImage.jpg";
+var photo = $("#photo");
+photo.attr("src", newPhoto.src);
+photo.attr("width", newPhoto.width);
+photo.attr("height", newPhoto.height);
