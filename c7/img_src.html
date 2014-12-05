@@ -33,6 +33,9 @@
 		background-color: green;
 		color: white;
 	}
+	img{
+		max-height: 600px;
+	}
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -44,8 +47,11 @@
 			$(this).siblings().removeClass("active");
 		});
 
-		$(".button").on("click", function(){
-			$("#change_me").attr("src","../../pictures/e_link2.jpg");
+		$("#linky").on("click", function(){
+			$("#change_me").attr("src","http://img4.wikia.nocookie.net/__cb20121125020225/zelda/images/3/3c/Link_(Super_Smash_Bros._Brawl).png");
+		});
+		$("#zeldy").on("click", function(){
+			$("#change_me").attr("src","../../pictures/Princess_Zelda_(Twilight_Princess).png");
 		});
 
 	}); //end doc ready
@@ -63,8 +69,6 @@
 					<div class="button" id="linky"><h2>Link</h2></div>
 					<div class="button" id="zeldy"><h2>Zelda</h2></div>
 				</div>
-
-			
 			<img src="http://upload.wikimedia.org/wikipedia/commons/a/ae/Question_mark_3d.png" alt="Link or Zelda. Guy is Link" id="change_me">
 			</div>
 		</div>
