@@ -12,11 +12,17 @@
 	$(document).ready(function(){
 		var new_pic = new Image();
 		new_pic.src = "../../pictures/trees.jpg"
+
+		var old_pic = new Image();
+		old_pic.src = "../../pictures/grass2.png"
 		
-		$("#photo").mouseover(function(){
+		$("#photo").mouseenter(function(){
 			$(this).attr("src", new_pic.src);
 		}); //end mouseover
 
+		$("#photo").mouseleave(function(){
+			$(this).attr("src", old_pic.src);
+		}); //end mouseover
 
 	}); //end doc ready
 </script>
