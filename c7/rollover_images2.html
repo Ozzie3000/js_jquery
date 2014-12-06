@@ -4,7 +4,7 @@
 <title>JS and jQuery | hover function</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css"></style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -12,6 +12,17 @@
 	$(document).ready(function(){
 		var new_pic = new Image();
 		new_pic.src = "../../pictures/trees.jpg"
+
+		var old_pic = $("#photo").attr("src");
+
+		$("#photo").hover(
+			function(){
+				$(this).attr("src", new_pic.src);
+			},
+			function(){
+				$(this).attr("src", old_pic);
+			}//end 2nd anon function
+			); //end hover func
 		
 
 
