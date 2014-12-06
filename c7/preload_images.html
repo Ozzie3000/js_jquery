@@ -17,7 +17,8 @@
 		//an array
 		var preloaded_pics = ["../../pictures/e_link2.jpg", "../../pictures/Princess_Zelda_(Twilight_Princess).png", "../../pictures/triforce.png"];
 		for (var i=0; i < preloaded_pics.length; i++){
-			new Image().src = preloaded_pics[i];
+			//new Image().src = preloaded_pics[i];
+			$("<img>").attr("src", preloaded_pics[i]);
 		}
 
 
@@ -29,8 +30,9 @@
 	<br /><br />
   <h1>Preload images for a faster feel</h1>
 
-  
+  <!--<img src="../../pictures/trees.jpg">  -->
 
+  <p></p>
 
 
 <script>
