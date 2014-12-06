@@ -4,17 +4,21 @@
 <title>JS and jQuery | preload images</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css"></style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//one item
-		var newPhoto = new Image();
-		newPhoto.src = "stuff/pic.jpg"
+		//var newPhoto = new Image();
+		//newPhoto.src = "stuff/pic.jpg"
 		
-
+		//an array
+		var preloaded_pics = ["../../pictures/e_link2.jpg", "../../pictures/Princess_Zelda_(Twilight_Princess).png", "../../pictures/triforce.png"];
+		for (var i=0; i < preloaded_pics.length; i++){
+			new Image().src = preloaded_pics[i];
+		}
 
 
 	}); //end doc ready
