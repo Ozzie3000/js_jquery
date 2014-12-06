@@ -18,9 +18,11 @@
 		$("#photo").hover(
 			function(){
 				$(this).attr("src", new_pic.src);
+				console.log("hi");
 			},
 			function(){
 				$(this).attr("src", old_pic);
+				console.log("bye");
 			}//end 2nd anon function
 			); //end hover func
 		
@@ -35,7 +37,7 @@
 	<br /><br />
   <h1>hover function on images</h1>
 
-  
+  <img src="../../pictures/grass2.png" id="photo">
 
 
 
