@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS and jQuery | hover function 3</title>
+<meta charset="utf-8">
+<meta name="description" content="HTML5 demos" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
+<style type="text/css"></style>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var new_pic = new Image();
+		new_pic.src = "../../pictures/trees.jpg"
+
+		var old_pic = $("#photo").attr("src");
+
+		$("#photo").hover(
+			function(){
+				$(this).attr("src", new_pic.src);
+				console.log("hi");
+			},
+			function(){
+				$(this).attr("src", old_pic);
+				console.log("bye");
+			}//end 2nd anon function
+			); //end hover func
+		
+
+
+
+	}); //end doc ready
+</script>
+</head>
+<body>
+	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
+	<br /><br />
+  <h1>Hover function 3. Not just on images</h1>
+
+  <img src="../../pictures/grass2.png" id="photo">
+
+
+
+<script>
+</script>
+</body>
+</html>
