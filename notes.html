@@ -260,3 +260,15 @@ var photo = $("#photo");
 photo.attr("src", newPhoto.src);
 photo.attr("width", newPhoto.width);
 photo.attr("height", newPhoto.height);
+
+//hover  takes 2 arguments 
+$("#photo").hover(
+	function(){
+		$(this).attr("src", new_pic.src);
+		console.log("hi");
+	},
+	function(){
+		$(this).attr("src", old_pic);
+		console.log("bye");
+	}//end 2nd anon function
+	); //end hover func
