@@ -15,13 +15,13 @@
 
 		var old_pic = $("#photo").attr("src");
 
-		$("#photo").hover(
+		$("p").hover(
 			function(){
-				$(this).attr("src", new_pic.src);
+				$("img").attr("src", new_pic.src);
 				console.log("hi");
 			},
 			function(){
-				$(this).attr("src", old_pic);
+				$("img").attr("src", old_pic);
 				console.log("bye");
 			}//end 2nd anon function
 			); //end hover func
@@ -36,6 +36,9 @@
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
   <h1>Hover function 3. Not just on images</h1>
+
+  <p id="p_1" title="hover over me">Hover over me!</p>
+  <br />
 
   <img src="../../pictures/grass2.png" id="photo">
 
