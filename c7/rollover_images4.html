@@ -21,9 +21,9 @@
 			var pic_src = $(this).attr("src");
 			var preloadImage = new Image();
 			var imgExt = /(\.w{3,4}$)/;
-			preloadImage.src = imgFile.replace(imgExt, "/_h$1");
+			preloadImage.src = pic_src.replace(imgExt, "/_h$1");
 			$(this).hover(
-				code
+				//console.log("test")  //showed 6 test working
 				); //end hover
 		}); //end each and anon func
 		
