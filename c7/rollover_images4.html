@@ -24,6 +24,12 @@
 			preloadImage.src = pic_src.replace(imgExt, "/_h$1");
 			$(this).hover(
 				//console.log("test")  //showed 6 test working
+				function(){
+					$(this).attr("src", preloadImage.src);
+				}, //end of first arg
+				function(){
+					$(this).attr("src", pic_src);
+				} //end 2nd arg
 				); //end hover
 		}); //end each and anon func
 		
