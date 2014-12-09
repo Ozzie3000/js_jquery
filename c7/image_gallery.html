@@ -30,7 +30,7 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#gallery img").each(function(){
+		$("#gallery img").each(function(i){
 			//console.log("hi");  //should say hi as many times as items in loop
 			var pic_src = $(this).attr("src");
 			var preloadImage = new Image();
@@ -43,14 +43,36 @@
 				//	$(this).css("width","30%");  //test to see if multiple actions can occur
 				}, //end of first arg
 				function(){
+					var currentSource = $(this).attr("src");
 					$(this).attr("src", pic_src);
 				} //end 2nd arg
 			); //end hover
-
-
 		}); //end each and anon func
 		
+		$('#gallery a').click(function(evt) {
+			//don't follow link
+			evt.preventDefault();
+			//get path to new image
+			var imgPath = $(this).attr('href');
+			//get reference to old image
+			var oldImage = $('#photo img');
 
+			//create HTML for new image
+			var newImage = $('<img src="' + imgPath +'">');
+			//make new image invisible
+			newImage.hide();
+			//add to the #photo div
+			$('#photo').prepend(newImage);
+			//fade in new image
+			newImage.fadeIn(1000);
+
+			//fade out old image and remove from DOM
+			oldImage.fadeOut(1000,function(){
+		  	$(this).remove();
+			});		 
+		}); // end click
+		
+	$('#gallery a:first').click();
 
 
 	}); //end doc ready
