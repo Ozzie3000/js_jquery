@@ -5,7 +5,27 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#gallery {
+	float: left;
+	width: 90px;
+	margin-right: 30px;
+	margin-left: 10px;
+	border-right: white 1px dotted;
+	}
+	#gallery img {
+		display: inline-block;
+		margin: 0 0 10px 0;
+		border: 1px solid rgb(0,0,0);
+	}
+	#photo {
+		margin-left: 150px;
+		position: relative;
+	}
+	#photo img {
+		position: absolute;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
@@ -21,12 +41,11 @@
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
-  <h1>imgage gallary</h1>
+  <h1>image gallary | slide show</h1>
 
   <div class="wrapper">
 		<div class="content">
 			<div class="main">
-				<h1>Slideshow</h1>
 				<div id="gallery">
 					<a href="../_images/large/slide1.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide1.jpg" width="70" height="70" alt="golf balls"></a>
 					<a href="../_images/large/slide2.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide2.jpg" width="70" height="70" alt="rock wall"></a>
