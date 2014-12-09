@@ -20,8 +20,8 @@
 			//console.log("hi");  //should say hi as many times as items in loop
 			var pic_src = $(this).attr("src");
 			var preloadImage = new Image();
-			var imgExt = /(\.w{3,4}$)/;
-			preloadImage.src = pic_src.replace(imgExt, "/_h$1");
+			var imgExt = /(\.\w{3,4}$)/;
+			preloadImage.src = pic_src.replace(imgExt, "_h$1");
 			$(this).hover(
 				//console.log("test")  //showed 6 test working
 				function(){
@@ -30,7 +30,9 @@
 				function(){
 					$(this).attr("src", pic_src);
 				} //end 2nd arg
-				); //end hover
+			); //end hover
+
+
 		}); //end each and anon func
 		
 
