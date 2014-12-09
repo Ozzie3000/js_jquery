@@ -30,7 +30,25 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
+		$("#gallery img").each(function(){
+			//console.log("hi");  //should say hi as many times as items in loop
+			var pic_src = $(this).attr("src");
+			var preloadImage = new Image();
+			var imgExt = /(\.\w{3,4}$)/;
+			preloadImage.src = pic_src.replace(imgExt, "_h$1");
+			$(this).hover(
+				//console.log("test")  //showed 6 test working
+				function(){
+					$(this).attr("src", preloadImage.src);
+				//	$(this).css("width","30%");  //test to see if multiple actions can occur
+				}, //end of first arg
+				function(){
+					$(this).attr("src", pic_src);
+				} //end 2nd arg
+			); //end hover
+
+
+		}); //end each and anon func
 		
 
 
