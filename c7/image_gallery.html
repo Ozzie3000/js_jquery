@@ -30,24 +30,7 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#gallery img").each(function(i){
-			//console.log("hi");  //should say hi as many times as items in loop
-			var pic_src = $(this).attr("src");
-			var preloadImage = new Image();
-			var imgExt = /(\.\w{3,4}$)/;
-			preloadImage.src = pic_src.replace(imgExt, "_h$1");
-			$(this).hover(
-				//console.log("test")  //showed 6 test working
-				function(){
-					$(this).attr("src", preloadImage.src);
-				//	$(this).css("width","30%");  //test to see if multiple actions can occur
-				}, //end of first arg
-				function(){
-					var currentSource = $(this).attr("src");
-					$(this).attr("src", pic_src);
-				} //end 2nd arg
-			); //end hover
-		}); //end each and anon func
+
 		
 		$('#gallery a').click(function(evt) {
 			//don't follow link
@@ -87,12 +70,12 @@
 		<div class="content">
 			<div class="main">
 				<div id="gallery">
-					<a href="../_images/large/slide1.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide1.jpg" width="70" height="70" alt="golf balls"></a>
-					<a href="../_images/large/slide2.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide2.jpg" width="70" height="70" alt="rock wall"></a>
-					<a href="../_images/large/slide3.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide3.jpg" width="70" height="70" alt="old course"></a>
-					<a href="../_images/large/slide4.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide4.jpg" width="70" height="70" alt="tees"></a>
-					<a href="../_images/large/slide5.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide5.jpg" width="70" height="70" alt="tree"></a>
-					<a href="../_images/large/slide6.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide6.jpg" width="70" height="70" alt="ocean course"></a>
+					<a href="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/large/slide1.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide1.jpg" width="70" height="70" alt="golf balls"></a>
+					<a href="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/large/slide2.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide2.jpg" width="70" height="70" alt="rock wall"></a>
+					<a href="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/large/slide3.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide3.jpg" width="70" height="70" alt="old course"></a>
+					<a href="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/large/slide4.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide4.jpg" width="70" height="70" alt="tees"></a>
+					<a href="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/large/slide5.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide5.jpg" width="70" height="70" alt="tree"></a>
+					<a href="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/large/slide6.jpg"><img src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/_images/small/slide6.jpg" width="70" height="70" alt="ocean course"></a>
 				</div>
 				<div id="photo"></div>
 			</div>
