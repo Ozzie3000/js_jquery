@@ -10,7 +10,11 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
+		$("a[href^='http://']").each(function(){
+			var href = $(this).attr("href");
+			href = href.replace("http://", "");
+			$(this).after(" (" + href + ")");
+		});
 		
 
 
