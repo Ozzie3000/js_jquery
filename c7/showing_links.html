@@ -5,7 +5,10 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	footer{ bottom: 5%;}
+	#spacer{ height: 300px;}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
@@ -14,6 +17,7 @@
 			var href = $(this).attr("href");
 			href = href.replace("http://", "");
 			$(this).after(" (" + href + ")");
+			$("#listing").append("<li>"+href+"</li>");
 		});
 		
 
@@ -33,9 +37,10 @@
   	<li><a href="http://www.startpage.com">startpage</a></li>
   </ol>
 
+  <div id="spacer"></div>
 
   <footer>
-  	<ol>Links above</ol>
+  	<ol id="listing">Links above</ol>
   </footer>
 
 <script>
