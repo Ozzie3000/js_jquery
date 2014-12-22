@@ -16,8 +16,10 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+		$("#ammy2, #yahoo2").hide();
+
 		$("#ammy1").click(function(){
-			$("ammy2").fadeIn("1000");
+			$("#ammy2").fadeIn("1000");
 			return false;
 		});
 		
@@ -35,7 +37,8 @@
 	<br /><br />
   <h1>stopping links in their tracks</h1>
 
-  <div id="ammy1"><br />
+  <div id="ammy1">
+  	<br />
   	<a id="ammy2" href="http://www.amazon.com">Amazon</a>
   	<br /><br />
   </div>
