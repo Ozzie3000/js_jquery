@@ -5,17 +5,26 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5 demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#ammy1{ background-color: blue;}
+	#ammy2{ background-color: red;}
+	#yahoo1{ background-color: blue;}
+	#yahoo2{ background-color: red;}
+
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#login_form").click(function(){
-			$("login_form").fadeIn("1000");
+		$("#ammy1").click(function(){
+			$("ammy2").fadeIn("1000");
 			return false;
 		});
 		
-
+		$("#yahoo1").click(function(event){
+			$("#yahoo2").fadeIn("1000");
+			event.preventDefault();
+		});
 
 
 	}); //end doc ready
@@ -26,9 +35,18 @@
 	<br /><br />
   <h1>stopping links in their tracks</h1>
 
-  <a id="login_form" href="http://www.amazon.com">Amazon</a>
+  <div id="ammy1"><br />
+  	<a id="ammy2" href="http://www.amazon.com">Amazon</a>
+  	<br /><br />
+  </div>
 
+  <br /><br />
 
+  <div id="yahoo1">
+  	<br />
+  	<a id="yahoo2" href="http://www.yahoo.com">yahoo</a>
+  	<br /><br />
+  </div>
 
 <script>
 </script>
