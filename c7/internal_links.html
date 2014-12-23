@@ -10,9 +10,12 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+		//what about internal?
+		//$("a[href^='//']").attr("target","_blank");
 		
-		
-
+		//need to put it on a server to test this
+		var internal_ab_url = location.protocol + '//' + location.hostname;
+		$("a[href^='http://'], a[href^='https://']").not("[href^='"+internal_ab_url+"']").attr("target", "_blank");
 
 
 	}); //end doc ready
@@ -23,7 +26,10 @@
 	<br /><br />
   <h1>internal links</h1>
 
-  
+  <div id="internal">
+  	<p><a href="//here">here</a></p>
+  	<p><a href="http://www.mydomain/whatever">here</a></p>
+  </div>
 
 
 
