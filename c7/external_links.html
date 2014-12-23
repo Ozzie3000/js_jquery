@@ -10,7 +10,8 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#a[href")
+		//will open link in a new window or tab if browser can
+		$("a[href^='http://']").attr("target","_blank");
 		
 
 
