@@ -15,7 +15,12 @@
 <script src="../../books/MM_JAVASCRIPT3E/MM_JAVASCRIPT3E/chapter07/smartmenus/jquery.smartmenus.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$(".sm").smartmenus();
+		$(".sm").smartmenus({
+			//pass it object literal  key: value
+			showFunction: function($ul, complete){
+				$ul.slideDown(300, complete);
+			}
+		}); //end smartmenus
 		
 
 
