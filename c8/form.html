@@ -10,7 +10,8 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
+		//make next text red
+    $("input[type='checkbox']").on("click", function(){ $(this).next("label").css("color","red");});
 		
 
 
@@ -31,6 +32,7 @@
 
   	<div>
   		<span class="lable">Hobbies</span>
+      <br/>
   		<input type="checkbox" name="hobby" id="hel" value="helisking">
 	  		<label>Heli-skiing</label>
 	  	<input type="checkbox" name="hobby" id="pickle" value="pickle">
