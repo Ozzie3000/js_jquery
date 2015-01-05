@@ -10,8 +10,23 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+ /* $("input[type='checkbox']").on("hover", function(){ 
+      $(this).next("label").css("color","red");
+    },
+    function(){
+      $(this).next("label").css("color","black");
+    });
+*/
+
 		//make next text red
-    $("input[type='checkbox']").on("click", function(){ $(this).next("label").css("color","red");});
+    $(":checkbox, :radio").hover(function(){ 
+      $(this).next().css("color","red");
+      console.log("enter");
+    },
+    function(){
+      $(this).next().css("color","black");
+      console.log("exit");
+    });
 		
 
 
