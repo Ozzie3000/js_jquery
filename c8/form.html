@@ -28,7 +28,12 @@
       console.log("exit");
     });
 		
-
+    $("label").hover(function(){ 
+      $(this).css("color","red");
+    },
+    function(){
+      $(this).css("color","black");
+    });
 
 
 	}); //end doc ready
