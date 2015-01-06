@@ -35,6 +35,11 @@
       $(this).css("color","black");
     });
 
+    $("#found").on("click", function(){
+      var stuff = $(":checked").val();
+      //$("#here").after("<li>hi</li>");
+      alert(stuff);
+    });
 
 	}); //end doc ready
 </script>
@@ -90,7 +95,8 @@
 
     <br />
     <button id="found">Show checked</button>
-    <span id="here"></span>
+    <br />
+    <span><ul id="here"></ul></span>
 
 <script>
 </script>
