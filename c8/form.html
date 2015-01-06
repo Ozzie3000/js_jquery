@@ -21,11 +21,11 @@
 		//make next text red
     $(":checkbox, :radio").hover(function(){ 
       $(this).next().css("color","red");
-      console.log("enter");
+      //console.log("enter");
     },
     function(){
       $(this).next().css("color","black");
-      console.log("exit");
+      //console.log("exit");
     });
 		
     $("label").hover(function(){ 
@@ -87,6 +87,10 @@
           <label for="funny">Funny</label>
       </div>
     </div>
+
+    <br />
+    <button id="found">Show checked</button>
+    <span id="here"></span>
 
 <script>
 </script>
