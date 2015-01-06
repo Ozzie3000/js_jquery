@@ -16,9 +16,15 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		var unitCost = 13.95
-		var units = $("#how_many").val();  //how much stuff
-		$("")
+		$("#cal").on("click", function(){
+			var unitCost = 13.95
+			var units = $("#how_many").val();  //how much stuff
+			var total_price = units * unitCost;
+			total_price = total_price.toFixed(2);
+			$("#total_value").val(total_price);
+		});
+
+		
 		
 
 
@@ -37,7 +43,7 @@
   	<br />
   	<span class="spacer">Price: </span>$<span id="unit_cost">13.95</span>
   	<br />
-  	<span class="spacer">Total cost: </span><input type="text" id="total">
+  	<span class="spacer">Total cost: </span><input type="text" id="total_value">
   </div>
 
 
