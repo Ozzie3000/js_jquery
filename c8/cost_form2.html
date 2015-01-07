@@ -43,13 +43,16 @@
 		});
 
 		function num_validator(){
-			$("#how_many, #unit_cost").each(function(){
-				alert("hi");
+			$("#how_many, #unit_cost, #total_value").each(function(){
+				//console.log('hi'); //debug code
+				if($(this).val() == ""){
+					console.log("hello");
+				}
 			});
 		}
 		
 
-
+		setTimeout(function(){num_validator();}, 100);
 
 	}); //end doc ready
 </script>
