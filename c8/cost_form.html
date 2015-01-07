@@ -17,11 +17,20 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$(".cal").on("click", function(){
+			$("#total_value").val("");
 			var unitCost = 13.95
 			var units = $("#how_many").val();  //how much stuff
+			if(isNaN(units) || units == ""){
+				alert("please pick an actual number");
+				$("#how_many").val("");
+				return false;
+			};
 			units = Math.floor(units);
 			var total_price = units * unitCost;
 			total_price = total_price.toFixed(2);
+			if(isNaN(total_price) || total_price == ""){
+				$("#total_value").val("");
+			};
 			$("#total_value").val(total_price);
 		});
 
@@ -46,6 +55,7 @@
   	<br />
   	<span class="spacer">Price: </span>$<span id="unit_cost">13.95</span>
   	<br />
+  	<hr>
   	<span class="spacer">Total cost: </span><input type="text" id="total_value">
   	<br /><br />
   	<button class="cal">Recalculate</button>
