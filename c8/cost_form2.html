@@ -22,7 +22,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#total_value").hide(0);
-
+/*
 		$(".cal").on("click", function(){
 			$("#total_value").show(0);
 			$("#total_value").val("");
@@ -41,18 +41,34 @@
 			};
 			$("#total_value").val(total_price);
 		});
+*/
 
 		function num_validator(){
 			$("#how_many, #unit_cost, #total_value").each(function(){
 				//console.log('hi'); //debug code
-				if($(this).val() == ""){
-					console.log("hello");
+				if($(this).val() == "" || $(this).val() == NaN){
+					alert("please pick a number");
+					return false;
 				}
 			});
 		}
+
+		$(".cal").on("click", function(){
+			$("#total_value").show(0);
+			$("#total_value").val("");
+			num_validator();
+			var unitCost = $("#unit_cost").val();
+			var units = $("#how_many").val();  //how much stuff
+			units = Math.floor(units);
+			var total_price = units * unitCost;
+			total_price = total_price.toFixed(2);
+			$("#total_value").val(total_price);
+		});
+
+
 		
 
-		setTimeout(function(){num_validator();}, 100);
+		//setInterval(function(){num_validator();}, 1000);
 
 	}); //end doc ready
 </script>
