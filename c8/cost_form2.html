@@ -4,7 +4,7 @@
 <title>JS and jQuery | </title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5, js, jquery demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css">
 	body{ padding: 0 10px;}
 	#box{
@@ -22,6 +22,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#total_value").hide(0);
+
 		$(".cal").on("click", function(){
 			$("#total_value").show(0);
 			$("#total_value").val("");
@@ -41,7 +42,11 @@
 			$("#total_value").val(total_price);
 		});
 
-		
+		function num_validator(){
+			$("#how_many, #unit_cost").each(function(){
+				alert("hi");
+			});
+		}
 		
 
 
