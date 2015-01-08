@@ -10,7 +10,18 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+		$("input").on("click", function(){
+			if($("#world").prop("checked")){
+			alert("you like world news!");
+			}else if($("#local").prop("checked")){
+				alert("you like local news!");
+			}else{
+				alert('pick one!');
+			}
+		});
+
 		
+
 		
 
 
@@ -24,8 +35,13 @@
   <h1>determining states</h1>
 
   <div id="news">
-  	<span>World news</span>
-  	<input type="checkbox">
+  	<span>Pick which News type you want to see</span>
+  	<br /><br />
+  	<input type="checkbox" value="world" id="world">
+  	<label for="world">World News</label>
+  	<span>or</span>
+  	<input type="checkbox" value="local" id="local">
+  	<label>Local News</label>
 
 
 
