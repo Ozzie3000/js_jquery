@@ -10,18 +10,40 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("input").on("click", function(){
+	/***
+		$("input").click(function(){
 			if($("#world").prop("checked")){
-			alert("you like world news!");
+				alert("you like world news!");
+			}else if($("#local").prop("checked")){
+				alert("you like local news!");
+			}else{
+				alert('pick one!');
+			}
+		},
+		function(){
+			if($("#world").prop("checked")){
+				$("#local").attr('checked', false);
+				$("#world").attr('checked', true);
+			}
+		},
+		function(){
+			if($("#local").prop("checked")){
+				$("#world").attr('checked', false);
+				$("#local").attr('checked', true);
+			}
+		});
+****/
+		
+
+		$("input").click(function(){
+			if($("#world").prop("checked")){
+				alert("you like world news!");
 			}else if($("#local").prop("checked")){
 				alert("you like local news!");
 			}else{
 				alert('pick one!');
 			}
 		});
-
-		
-
 		
 
 
@@ -37,10 +59,10 @@
   <div id="news">
   	<span>Pick which News type you want to see</span>
   	<br /><br />
-  	<input type="checkbox" value="world" id="world">
+  	<input type="radio" value="world" id="world">
   	<label for="world">World News</label>
   	<span>or</span>
-  	<input type="checkbox" value="local" id="local">
+  	<input type="radio" value="local" id="local">
   	<label>Local News</label>
 
 
