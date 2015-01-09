@@ -10,14 +10,6 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
- /* $("input[type='checkbox']").on("hover", function(){ 
-      $(this).next("label").css("color","red");
-    },
-    function(){
-      $(this).next("label").css("color","black");
-    });
-*/
-
 		//make next text red
     $(":checkbox, :radio").hover(function(){ 
       $(this).next().css("color","red");
@@ -35,11 +27,12 @@
       $(this).css("color","black");
     });
 
-    $("#found").on("click", function(){
-      var stuff = $(":checked").val();
-      //$("#here").after("<li>hi</li>");
-      alert(stuff);
-    });
+    $("#signup").submit(function(){
+    	if($("#username").val() == ""){
+    		alert("please supply a name in the Name field");
+    		return false;
+    	}
+    }); //end of submit function
 
 	}); //end doc ready
 </script>
@@ -51,9 +44,11 @@
 
   <form action="process.php" method="post" name="signup" id="signup">
   	<div>
-  		<label for="username" class="label">Name</label>
+  		<label for="username" class="label">User Name: </label>
   		<input name="username" type="text" id="username" size="36">
   	</div>
+
+  	<br />
 
   	<div>
   		<span class="label">Hobbies</span>
@@ -94,9 +89,12 @@
     </div>
 
     <br />
-    <button id="found">Show checked</button>
+    <div>
+    	<button id="submit">Submit</button>
+    </div>
     <br />
-    <span><ul id="here"></ul></span>
+   </form>
+
 
 <script>
 </script>
