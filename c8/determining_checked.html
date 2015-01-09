@@ -34,7 +34,7 @@
 		});
 ****/
 		
-
+/**
 		$("input").click(function(){
 			if($("#world").prop("checked")){
 				alert("you like world news!");
@@ -43,9 +43,37 @@
 			}else{
 				alert('pick one!');
 			}
+		},
+		function(){
+			if($("#world").prop("checked")){
+				$("#local").attr('checked', false);
+				$("#world").attr('checked', true);
+			}
+		},
+		function(){
+			if($("#local").prop("checked")){
+				$("#world").attr('checked', false);
+				$("#local").attr('checked', true);
+			}
 		});
-		
+**/		
 
+		$("input").click(function(){
+			if($("#world").prop("checked")){
+				setTimeout(function(){ alert("you like world news!"); }, 600);
+			}else if($("#local").prop("checked")){
+				setTimeout(function(){ alert("you like local news!"); }, 600);
+			}else{
+				setTimeout(function(){ alert('pick one!'); }, 600);
+			}
+		});
+
+		$("#world").click(function(){
+			$("#local").attr('checked', false);
+		});
+		$("#local").click(function(){
+			$("#world").attr('checked', false);
+		});
 
 
 	}); //end doc ready
