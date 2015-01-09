@@ -10,10 +10,36 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
-		
+ /* $("input[type='checkbox']").on("hover", function(){ 
+      $(this).next("label").css("color","red");
+    },
+    function(){
+      $(this).next("label").css("color","black");
+    });
+*/
 
+		//make next text red
+    $(":checkbox, :radio").hover(function(){ 
+      $(this).next().css("color","red");
+      //console.log("enter");
+    },
+    function(){
+      $(this).next().css("color","black");
+      //console.log("exit");
+    });
+		
+    $("label").hover(function(){ 
+      $(this).css("color","red");
+    },
+    function(){
+      $(this).css("color","black");
+    });
 
+    $("#found").on("click", function(){
+      var stuff = $(":checked").val();
+      //$("#here").after("<li>hi</li>");
+      alert(stuff);
+    });
 
 	}); //end doc ready
 </script>
@@ -21,11 +47,56 @@
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
-  <h1>form 2 with jquery</h1>
+  <h1>form 2 with jQuery</h1>
 
-  
+  <form action="process.php" method="post" name="signup" id="signup">
+  	<div>
+  		<label for="username" class="label">Name</label>
+  		<input name="username" type="text" id="username" size="36">
+  	</div>
 
+  	<div>
+  		<span class="label">Hobbies</span>
+      <br/>
+  		<input type="checkbox" name="hobby" id="hel" value="helisking">
+	  		<label>Heli-skiing</label>
+	  	<input type="checkbox" name="hobby" id="pickle" value="pickle">
+	  		<label>Eating pickles</label>
+	  	<input type="checkbox" name="hobby" id="walnut" value="walnut">
+	  		<label for="walnut">Making walnut butter</label>
+  	</div>
 
+  	<br />
+
+  	<div>
+  		<label for="planet" class="label">Planet of origin</label>
+
+  		<select name="planet" id="planet">
+        <option id="mercury">Mercury</option>
+        <option id="venus">Venus</option>
+        <option id="earth">Earth</option>
+        <option id="mars">Mars</option>
+        <option id="huh">This language is too primative</option>
+  		</select>
+  	</div>
+    
+    <br />
+
+    <div class="Wrapper">
+      <div class="indent">
+        <input type="radio" name="spam" id="spammer" value="yes" checked="checked" >
+          <label for="spammer">Yes</label>
+        <input type="radio" name="spam" id="definitely" value="definitely">
+          <label for="definitely">Definitely</label>
+        <input type="radio" name="spam" id="funny" value="funny">
+          <label for="funny">Funny</label>
+      </div>
+    </div>
+
+    <br />
+    <button id="found">Show checked</button>
+    <br />
+    <span><ul id="here"></ul></span>
 
 <script>
 </script>
