@@ -58,13 +58,15 @@
 		});
 **/		
 
-		$("input").click(function(){
+		$("#world").click(function(){
 			if($("#world").prop("checked")){
-				setTimeout(function(){ alert("you like world news!"); }, 600);
-			},else if($("#local").prop("checked")){
-				setTimeout(function(){ alert("you like local news!"); }, 600);
-			}else{
-				setTimeout(function(){ alert('pick one!'); }, 600);
+				setTimeout(function(){ alert("you like world news!"); }, 400);
+			};
+		});
+
+		$("#local").click(function(){
+			if($("#local").prop("checked")){
+				setTimeout(function(){ alert("you like local news!"); }, 400);
 			}
 		});
 
@@ -89,7 +91,7 @@
   	<br /><br />
   	<input type="radio" value="world" id="world">
   	<label for="world">World News</label>
-  	<span>or</span>
+  	<br /><span>or</span><br />
   	<input type="radio" value="local" id="local">
   	<label>Local News</label>
 
