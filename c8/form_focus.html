@@ -5,12 +5,28 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5, js, jquery demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	#username{
+		color: grey;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+		$("#username, #password").focus(function(){
+			var field = $(this);
+			if(field.val() == field.prop("defaultValue")){
+				field.val("");
+			}
+		});
 		
+		$("#username").blur(function(){
+			var field = $(this);
+			if(field.val() == ""){
+				field.val("please type your user name");
+			}
+		});
 		
 
 
@@ -24,8 +40,8 @@
   <h1>forms with focus</h1>
 
   username: <input name="username" type="text" id="username" value="please type your user name">
-
-
+  <br /><br />
+  password: <input name="password" type"password" id="password" value="********" > 
 
 <script>
 </script>
