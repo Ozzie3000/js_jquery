@@ -6,7 +6,7 @@
 <meta name="description" content="HTML5, js, jquery demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
 <style type="text/css">
-	#username{
+	#username, #password{
 		color: grey;
 	}
 </style>
@@ -15,21 +15,29 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#username, #password").focus(function(){
-			var field = $(this);
-			if(field.val() == field.prop("defaultValue")){
-				field.val("");
+			var old_field = $(this);
+			if(old_field.val() == old_field.prop("defaultValue")){
+				old_field.val("");
+			};
+		});
+
+	$("#username").blur(function(){
+		var new_field = $(this);
+		if(new_field.val() == ""){
+			$(this).val("please type your user name");
+		}
+	});
+
+	$("#password").blur(function(){
+			var new_field = $(this);
+			if(new_field.val() == ""){
+				$(this).val("********");
 			}
 		});
 		
-		$("#username").blur(function(){
-			var field = $(this);
-			if(field.val() == ""){
-				field.val("please type your user name");
-			}
-		});
 		
 
-
+	
 
 	}); //end doc ready
 </script>
