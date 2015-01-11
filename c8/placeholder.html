@@ -4,8 +4,14 @@
 <title>JS and jQuery | html placeholder</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5, js, jquery demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
+<style type="text/css">
+	.receiver{
+		padding: 2px 10px;
+		margin: 2px 10px;
+
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
@@ -23,7 +29,11 @@
 	<br /><br />
   <h1>html 5 placeholder attribute</h1>
 
-  
+  <!-- placeholder will not work on ie9 or earlier-->
+  <form id="creds">
+	  Username: <input type="text" id="username" class="receiver" placeholder="Please type in your username" size="22em">
+	  Password: <input type="password" id="username" class="receiver" placeholder="Please type in your password" size="22em">
+	</form>
 
 
 
