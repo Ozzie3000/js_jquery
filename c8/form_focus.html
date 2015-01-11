@@ -21,6 +21,7 @@
 			};
 		});
 
+/***
 	$("#username").blur(function(){
 		var new_field = $(this);
 		if(new_field.val() == ""){
@@ -36,8 +37,15 @@
 			console.log(new_field.val());
 			console.log(new_field.prop("defaultValue"));
 		});
-		
-		
+	****/
+
+	// 1 code for both fields
+	$("#username, #password").blur(function(){
+		var new_field = $(this);
+		if(new_field.val() == ""){
+			$(this).val(new_field.prop("defaultValue"));
+		}
+	});
 
 	
 
