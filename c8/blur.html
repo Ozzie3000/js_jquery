@@ -5,7 +5,19 @@
 <meta charset="utf-8">
 <meta name="description" content="HTML5, js, jquery demos" />
 <link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
-<style type="text/css"></style>
+<style type="text/css">
+	.errors{
+		color: red;
+		font-family: helvetica;
+	}
+	.fields{
+		padding: 0;
+		margin: 2px 10px;
+	}
+	#total{
+		color: cyan;
+	}
+</style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
@@ -15,6 +27,8 @@
 			var field_value = $(this).val();
 			if(isNaN(field_value)){
 				alert("Please supply a numeric value");
+				$("#error1").append("test");
+				$("#error1").show();
 			}
 		});
 		
@@ -30,14 +44,14 @@
   <h1>form fields with blur</h1>
 
   <form>
-  	<span id="error1" class="errors"></span><br />
-  	Quantity: <input name="quantity" id="quantity" type="text" placeholder="enter a numeric amount">
+  	<span id="error1" class="errors"></span><br /><br />
+  	Quantity: <input name="quantity" id="quantity" class="fields" type="text" tabindex="1" placeholder="enter a numeric amount">
   	<br />
-  	<span id="error2" class="errors"></span><br />
-  	Unit Price: <input name="unit_price" id="unit_price" type="text" placeholder="price per item">
+  	<span id="error2" class="errors"></span><br /><br />
+  	Unit Price: <input name="unit_price" id="unit_price" class="fields" type="text" tabindex="2" placeholder="price per item">
   	<br />
   	<hr>
-  	Total price: <input name="total" id="total" type="text" placeholder="Total price goes here">
+  	Total price: <input name="total" id="total" class="fields" type="text" tabindex="-1" placeholder="Total price goes here">
   </form>
 
 
