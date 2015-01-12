@@ -10,7 +10,13 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
+		$(".errors").hide(0);
+		$("#quantity").blur(function(){
+			var field_value = $(this).val();
+			if(isNaN(field_value)){
+				alert("Please supply a numeric value");
+			}
+		});
 		
 
 
@@ -24,8 +30,10 @@
   <h1>form fields with blur</h1>
 
   <form>
+  	<span id="error1" class="errors"></span><br />
   	Quantity: <input name="quantity" id="quantity" type="text" placeholder="enter a numeric amount">
   	<br />
+  	<span id="error2" class="errors"></span><br />
   	Unit Price: <input name="unit_price" id="unit_price" type="text" placeholder="price per item">
   	<br />
   	<hr>
