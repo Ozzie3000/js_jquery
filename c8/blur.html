@@ -4,7 +4,7 @@
 <title>JS and jQuery | blur</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5, js, jquery demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css">
 	.errors{
 		color: red;
@@ -17,22 +17,34 @@
 	#total{
 		color: cyan;
 	}
+	form{
+		width: 400px;
+		height: 300px;
+	}
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$(".errors").hide(0);
-		$("#quantity").blur(function(){
+		$("#quantity, #unit_price").blur(function(){
 			var field_value = $(this).val();
 			if(isNaN(field_value)){
 				alert("Please supply a numeric value");
-				$("#error1").append("test");
-				$("#error1").show();
+				
 			}
 		});
 		
+		$("#unit_price").blur(function(){
+			var quantity = $("#quantity").val();
+			var price = $("#unit_price").val();
+			$("#total").val(quantity * price);
+		});
 
+		function err1 (){
+			$("#error1").append("test");
+				$("#error1").show();
+		}
 
 
 	}); //end doc ready
