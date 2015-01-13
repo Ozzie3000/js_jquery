@@ -4,7 +4,7 @@
 <title>JS and jQuery | more forms</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5, js, jquery demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css"></style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -35,11 +35,7 @@
       $(this).css("color","black");
     });
 
-    $("#found").on("click", function(){
-      var stuff = $(":checked").val();
-      //$("#here").after("<li>hi</li>");
-      alert(stuff);
-    });
+    
 
 	}); //end doc ready
 </script>
@@ -49,7 +45,7 @@
 	<br /><br />
   <h1>forms 3: Smarter forms</h1>
 
-  <form action="process.php" method="post" name="signup" id="signup">
+  <form  method="post" name="signup" id="signup">
   	<div>
   		<label for="username" class="label">Name</label>
   		<input name="username" type="text" id="username" size="36">
@@ -92,11 +88,6 @@
           <label for="funny">Funny</label>
       </div>
     </div>
-
-    <br />
-    <button id="found">Show checked</button>
-    <br />
-    <span><ul id="here"></ul></span>
 
 <script>
 </script>
