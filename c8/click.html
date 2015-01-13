@@ -10,7 +10,9 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
+		$(":radio").click(function(){
+			alert("You seem to like clicking stuff I see");
+		});
 		
 
 
@@ -24,7 +26,10 @@
   <h1>click events</h1>
 
   <!--click event on anything  -->
-  <input type="radio" value="local" id="local" >
+  <input type="radio" value="local" id="local">
+  <label for="local">Local News</label>
+  <input type="radio" value="world" id="world">
+  <label for="world">World News</label>
 
 
 
