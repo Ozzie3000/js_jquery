@@ -30,6 +30,7 @@
 
 		$("#quantity").focus();
 
+/****   original
 		$("#quantity, #unit_price").change(function(){
 			var field_value = $(this).val();
 			if(isNaN(field_value) || field_value.prop("defaultValue")){
@@ -44,10 +45,22 @@
 			$("#total").val(quantity * price);
 		});
 
-		function err1 (){
-			$("#error1").append("test");
-				$("#error1").show();
-		}
+****/
+		//$("#quantity, #unit_price").val();
+
+		$("#quantity, #unit_price").change(function(){
+			var field_value = $(this).val();
+			if(($(this).val() == "") || isNaN(field_value)){
+				alert("Please supply a numeric value");
+				$(this).val("");
+			}
+		});
+		
+		$("#unit_price, #quantity").change(function(){
+			var quantity = $("#quantity").val();
+			var price = $("#unit_price").val();
+			$("#total").val(quantity * price);
+		});
 
 
 	}); //end doc ready
