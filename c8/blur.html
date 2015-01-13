@@ -29,11 +29,12 @@
 		$(".errors").hide(0);
 
 		$("#quantity").focus();
+
 		$("#quantity, #unit_price").blur(function(){
 			var field_value = $(this).val();
-			if(isNaN(field_value)){
+			if(isNaN(field_value) || field_value.prop("defaultValue")){
 				alert("Please supply a numeric value");
-				
+				$(this).val(field_value.prop("defaultValue"));
 			}
 		});
 		
