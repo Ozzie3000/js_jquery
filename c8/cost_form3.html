@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS and jQuery | blur</title>
+<meta charset="utf-8">
+<meta name="description" content="HTML5, js, jquery demos" />
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
+<style type="text/css">
+	.errors{
+		color: red;
+		font-family: helvetica;
+	}
+	.fields{
+		padding: 0;
+		margin: 2px 10px;
+	}
+	#total{
+		color: cyan;
+	}
+	form{
+		width: 400px;
+		height: 300px;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".errors").hide(0);
+
+		$("#quantity").focus();
+
+		$("#quantity, #unit_price").blur(function(){
+			var field_value = $(this).val();
+			if(isNaN(field_value) || field_value.prop("defaultValue")){
+				alert("Please supply a numeric value");
+				$(this).val(field_value.prop("defaultValue"));
+			}
+		});
+		
+		$("#unit_price").blur(function(){
+			var quantity = $("#quantity").val();
+			var price = $("#unit_price").val();
+			$("#total").val(quantity * price);
+		});
+
+		function err1 (){
+			$("#error1").append("test");
+				$("#error1").show();
+		}
+
+
+	}); //end doc ready
+</script>
+</head>
+<body>
+	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
+	<br /><br />
+  <h1>form fields with blur</h1>
+
+  <form>
+  	<span id="error1" class="errors"></span><br /><br />
+  	Quantity: <input name="quantity" id="quantity" class="fields" type="text" tabindex="1" placeholder="enter a numeric amount">
+  	<br />
+  	<span id="error2" class="errors"></span><br /><br />
+  	Unit Price: <input name="unit_price" id="unit_price" class="fields" type="text" tabindex="2" placeholder="price per item">
+  	<br />
+  	<hr>
+  	Total price: <input name="total" id="total" class="fields" type="text" tabindex="-1" placeholder="Total price goes here" disabled="true">
+  </form>
+
+
+
+<script>
+</script>
+</body>
+</html>
