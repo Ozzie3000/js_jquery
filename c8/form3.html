@@ -35,7 +35,7 @@
       $(this).css("color","black");
     });
 
-    
+    $("#username").focus();
 
 	}); //end doc ready
 </script>
@@ -47,17 +47,17 @@
 
   <form  method="post" name="signup" id="signup">
   	<div>
-  		<label for="username" class="label">Name</label>
+  		<label for="username" class="label"> Name: </label>
   		<input name="username" type="text" id="username" size="36">
   	</div>
-
+  	<br />
   	<div>
   		<span class="label">Hobbies</span>
       <br/>
   		<input type="checkbox" name="hobby" id="hel" value="helisking">
-	  		<label>Heli-skiing</label>
+	  		<label for="hel">Heli-skiing</label>
 	  	<input type="checkbox" name="hobby" id="pickle" value="pickle">
-	  		<label>Eating pickles</label>
+	  		<label for="pickle">Eating pickles</label>
 	  	<input type="checkbox" name="hobby" id="walnut" value="walnut">
 	  		<label for="walnut">Making walnut butter</label>
   	</div>
