@@ -11,7 +11,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#off").click(function(){
-			$(":input").prop("disabled", true);
+			$(":input").not("#on").prop("disabled", true);
 		});
 		$("#on").click(function(){
 			$(":input").prop("disabled", false);
