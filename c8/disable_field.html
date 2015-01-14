@@ -4,7 +4,7 @@
 <title>JS and jQuery | disabling fields</title>
 <meta charset="utf-8">
 <meta name="description" content="HTML5, js, jquery demos" />
-<link rel="stylesheet" type="text/css" href="stylesheets/main1.css"></link>
+<link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css"></style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -17,7 +17,12 @@
 			$(":input").prop("disabled", false);
 		});
 		
-
+		$("#status").change(function(){
+			if($("#single").prop(":checked")){
+				console.log("single");
+			}
+		
+		});
 
 
 	}); //end doc ready
@@ -38,9 +43,9 @@
   <br /><br />
   <form id="status">
 	  <label for="single">Single</label>
-	  <input type="radio" id="single">
-	  <label for="Married">Married</label>
-	  <input type="radio" id="Married">
+	  <input type="radio" id="single" name="status" value="single">
+	  <label for="married">Married</label>
+	  <input type="radio" id="married" name="status" value="married">
 	  <br />
 	  <textarea id="one" placeholder="Single"></textarea>
 	  <textarea id="two" placeholder="Married"></textarea>
