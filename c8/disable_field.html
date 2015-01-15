@@ -20,9 +20,13 @@
 		$("input[name='status']").click(function(){
 			if($("input[name='status']:checked").val() == 'single'){
 				console.log("single");
+				$("#one").fadeIn(1000);
+				$("#two").fadeOut(1000);
 			}
 			if($("input[name='status']:checked").val() == 'married'){
 				console.log("married");
+				$("#two").fadeIn(1000);
+				$("#one").fadeOut(1000);
 			}
 		
 		});
