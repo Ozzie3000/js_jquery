@@ -20,11 +20,15 @@
 		$("input[name='status']").click(function(){
 			if($("input[name='status']:checked").val() == 'single'){
 				console.log("single");
+				$("#one").prop("disabled", false);
+				$("#two").prop("disabled", true);
 				$("#one").fadeIn(1000);
 				$("#two").fadeOut(1000);
 			}
 			if($("input[name='status']:checked").val() == 'married'){
 				console.log("married");
+				$("#two").prop("disabled", false);
+				$("#one").prop("disabled", true);
 				$("#two").fadeIn(1000);
 				$("#one").fadeOut(1000);
 			}
