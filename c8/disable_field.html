@@ -17,8 +17,8 @@
 			$(":input").prop("disabled", false);
 		});
 		
-		$("#status").change(function(){
-			if($("#single").prop(":checked")){
+		$("input[name='status']").click(function(){
+			if($("input[name='status']:checked").val() == 'single'){
 				console.log("single");
 			}
 		
