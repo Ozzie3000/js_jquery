@@ -10,11 +10,19 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+		/***
 		$("#form1").submit(function(){
 			$("#submit").prop("disabled", true);
+			$("#submit").val("...sending...");
 		});
+*****/
 		
-
+		$("#form1").submit(function(){
+			var submit_button = $(this).find(":submit");
+			submit_button.prop("disabled", true);
+			submit_button.val("...sending info...");
+			return false;
+		});
 
 
 	}); //end doc ready
@@ -27,7 +35,7 @@
 
   <form method="post" id="form1">
   	<input type="text" placeholder="Type in here">
-  	<input type="submit" id="submit" value="submit">
+  	<input type="submit" id="sub1" value="submit">
   </form>
 
 
