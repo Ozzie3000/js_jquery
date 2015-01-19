@@ -17,6 +17,12 @@
 			$("#creditCard label").css("color", "#BBB"); 
 		}); //end of click for paypal
 
+		$("#visa, #mastercard").click(function(){
+			$("creditCard input").prop("disabled", false).css("backgroundColor","");
+			$("creditCard label").css("color", "");
+		}); //end click for vs mc
+
+		
 
 	}); //end doc ready
 </script>
