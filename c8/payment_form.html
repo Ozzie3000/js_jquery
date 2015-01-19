@@ -18,11 +18,17 @@
 		}); //end of click for paypal
 
 		$("#visa, #mastercard").click(function(){
-			$("creditCard input").prop("disabled", false).css("backgroundColor","");
-			$("creditCard label").css("color", "");
+			$("#creditCard input").prop("disabled", false).css("backgroundColor","");
+			$("#creditCard label").css("color", "");
 		}); //end click for vs mc
 
-		
+		$("#hideShip").click(function(){
+			if($(this).prop("checked")){
+				$("#shipping").slideUp(1000);
+			}else{
+				$("#shipping").slideDown(1000);
+			}
+		}); //end click hide shipping
 
 	}); //end doc ready
 </script>
