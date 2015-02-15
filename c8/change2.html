@@ -6,14 +6,24 @@
 <meta name="description" content="HTML5, js, jquery demos" />
 <link rel="stylesheet" type="text/css" href="../stylesheets/main1.css"></link>
 <style type="text/css">
+<<<<<<< HEAD
 
 
+=======
+  body{
+    margin: 0 auto;
+    display: table;
+  }
+  h1:hover{
+    color: cyan;
+  }
+>>>>>>> 5e382105963cc72b10fe3a9be21f8688e658c566
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#country").change(function(){
+		$("#gender").change(function(){
 			if($(this).val() == "Please choose a gender"){
 				alert("Please select a gender from this menu!!!");
 			}
@@ -29,7 +39,7 @@
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
-  <h1>change</h1>
+  <h1>Choose your image</h1>
 
   <form>
   	<select id="gender">
@@ -43,8 +53,25 @@
   <hr>
   <br /><br />
 
+  <div id="big_wrapper">
+    <div id="target">
+    </div>
+  </div>
 
 <script>
 </script>
 </body>
 </html>
+
+<!--
+http://www.clipartbest.com/cliparts/9Tz/kqn/9TzkqnLTE.svg
+male
+http://www.clker.com/cliparts/e/b/7/0/12362693641685578473ericlemerdy_man.svg.med.png
+female
+http://www.clker.com/cliparts/7/3/a/6/11949891621975732799aiga_toilet_women_.svg.med.png
+dalek
+http://static.comicvine.com/uploads/original/11113/111136721/3511908-7978883787-CutOu.jpg
+canada
+https://pbs.twimg.com/profile_images/459043050761621505/26D4Qt5X.png
+
+-->
