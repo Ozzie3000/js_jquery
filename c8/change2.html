@@ -9,7 +9,14 @@
   body{
     margin: 0 auto;
     display: table;
+    background: url("http://imagesci.com/img/2013/11/cool-planet-wallpaper-1884-hd-wallpapers.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
   }
+
   h1:hover{
     color: cyan;
   }
@@ -19,18 +26,31 @@
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+    $("#change_me").hide(0);
 		$("#gender").change(function(){
 			if($(this).val() == "Please choose a gender"){
 				alert("Please select a gender from this menu!!!");
 			}
-
+///debug
       if($(this).val() == "Male"){
-        alert("male");
+       // console.log("Male");
+        $("#change_me").attr("src","http://www.clker.com/cliparts/e/b/7/0/12362693641685578473ericlemerdy_man.svg.med.png");
       }
+      if($(this).val() == "Female"){
+        //console.log("Female");
+        $("#change_me").attr("src","http://www.clker.com/cliparts/7/3/a/6/11949891621975732799aiga_toilet_women_.svg.med.png");
+      }
+      if($(this).val() == "Dalek"){
+        //console.log("Dalek");
+        $("#change_me").attr("src","http://static.comicvine.com/uploads/original/11113/111136721/3511908-7978883787-CutOu.jpg");
+      }
+      if($(this).val() == "Canananadian"){
+        //console.log("Canananadian");
+        $("#change_me").attr("src","https://pbs.twimg.com/profile_images/459043050761621505/26D4Qt5X.png");
+      }
+      $("#change_me").fadeIn(600);
 		});
-		
-    switch()
-
+ 
 
 	}); //end doc ready
 </script>
@@ -54,6 +74,7 @@
 
   <div id="big_wrapper">
     <div id="target">
+      <img id="change_me" src="#">
     </div>
   </div>
 
