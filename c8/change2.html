@@ -27,6 +27,10 @@
 <script type="text/javascript">
 	$(document).ready(function(){
     $("#change_me").hide(0);
+    var str = prompt("Hello what is your name?");
+    name = str.toUpperCase();
+    //console.log(name);
+
 		$("#gender").change(function(){
 			if($(this).val() == "Please choose a gender"){
 				alert("Please select a gender from this menu!!!");
