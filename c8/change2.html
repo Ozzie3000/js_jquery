@@ -27,9 +27,13 @@
 <script type="text/javascript">
 	$(document).ready(function(){
     $("#change_me").hide(0);
-    var str = prompt("Hello what is your name?");
-    name = str.toUpperCase();
-    //console.log(name);
+    function getName(){
+      var str = prompt("Hello what is your name?");
+      name = str.toUpperCase();
+      //console.log(name);
+      $("#name").text(name);
+    }
+    
 
 		$("#gender").change(function(){
 			if($(this).val() == "Please choose a gender"){
@@ -62,7 +66,7 @@
 <body>
 	<input type="button" id="submit" class="btn" value="Refreshness" onclick="location.reload();" />
 	<br /><br />
-  <h1>Choose your image</h1>
+  <h1><span id="name">&nbps;</span> choose your gender below.</h1>
 
   <form>
   	<select id="gender">
