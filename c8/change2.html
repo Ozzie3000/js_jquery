@@ -20,7 +20,18 @@
   h1:hover{
     color: cyan;
   }
-
+  .hidde_me{
+    display: none;
+  }
+  #foot1{
+    color: #ff69b4;
+  }
+  #foot2{
+    color: #000000;
+  }
+  #foot3{
+    color: #d3d3d3;
+  }
 </style>
 <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
@@ -36,9 +47,13 @@
       //console.log(name);
 
       $("#name").text(name);
+      if(name == "ashley"){
+        $("#ashley").text(name);
+        $("#foot1").removeClass(hidde_me);
+      };
     }
 
-    setTimeout(function(){ getName();},100000);
+    setTimeout(function(){ getName();},1000);
 
 		$("#gender").change(function(){
 			if($(this).val() == "Please choose a gender"){
@@ -92,9 +107,12 @@
   </div>
 
 
-  <div id="foot1" class="hidde_me"><span id="ashley"></span> is loves Portland</div>
-  <div id="foot2" class="hidde_me"><span id="steven"></span> is too close to work</div>
-  <div id="foot3" class="hidde_me"><span id="angel"></span> is laughing right now</div>
+  <div id="small_wrapper">
+    <div id="foot1" class="hidde_me"><span id="ashley"></span> is loves Portland</div>
+    <div id="foot2" class="hidde_me"><span id="steven"></span> is too close to work</div>
+    <div id="foot3" class="hidde_me"><span id="angel"></span> is laughing right now</div>
+  </div>
+
 
 <script>
 </script>
